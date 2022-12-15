@@ -1,0 +1,410 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:1:1-64:12
+INJECTED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:1:1-64:12
+INJECTED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:1:1-64:12
+INJECTED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:1:1-64:12
+MERGED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:1:1-64:12
+MERGED from [:background_fetch] C:\Gentec\Gentec_Dashboard_Flutter\build\background_fetch\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-10:12
+MERGED from [:geolocator] C:\Gentec\Gentec_Dashboard_Flutter\build\geolocator\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:google_api_availability] C:\Gentec\Gentec_Dashboard_Flutter\build\google_api_availability\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:shared_preferences] C:\Gentec\Gentec_Dashboard_Flutter\build\shared_preferences\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:location_permissions] C:\Gentec\Gentec_Dashboard_Flutter\build\location_permissions\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:webview_flutter] C:\Gentec\Gentec_Dashboard_Flutter\build\webview_flutter\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:flutter_webview_plugin] C:\Gentec\Gentec_Dashboard_Flutter\build\flutter_webview_plugin\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-21:12
+MERGED from [:connectivity] C:\Gentec\Gentec_Dashboard_Flutter\build\connectivity\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:fluttertoast] C:\Gentec\Gentec_Dashboard_Flutter\build\fluttertoast\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:location] C:\Gentec\Gentec_Dashboard_Flutter\build\location\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-10:12
+MERGED from [:permission_handler] C:\Gentec\Gentec_Dashboard_Flutter\build\permission_handler\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:background_locator] C:\Gentec\Gentec_Dashboard_Flutter\build\background_locator\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\e99863ae273117549019adfb26e7bdb2\window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\2d050db089454b7edff9aac5d4cee183\jetified-window-1.0.0-beta04\AndroidManifest.xml:17:1-33:12
+MERGED from [com.google.android.gms:play-services-location:19.0.1] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\129d4228ad8dcddf02c545c0b69db7c0\play-services-location-19.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\1764337dee95b0b9171965ccf7699359\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.room:room-runtime:2.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\7e0100f91b1ca0b1404a186bf812ef98\room-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.transistorsoft:tsbackgroundfetch:0.5.2] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\824d8d834ba8c27286d8269b9a3f7949\tsbackgroundfetch-0.5.2\AndroidManifest.xml:2:1-33:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\db3bef0bbb0a8c88bceb752b3adef88c\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\93e7bdef658a51fcf6859519c52ee94a\play-services-base-18.0.1\AndroidManifest.xml:16:1-24:12
+MERGED from [androidx.webkit:webkit:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\494c6c56780b149f40f023734474a57c\webkit-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite-framework:2.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\15517014842b6fbc0c15263fc091b3e8\sqlite-framework-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\ff306e121793bf8e564ccfb4bc007ca3\sqlite-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0-rc01] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\4c451ab1ebcfc5a7e3b3331ddf5ef6a5\legacy-support-core-utils-1.0.0-rc01\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\b19601c99612acb2d6c7bffc8b2b817d\play-services-places-placereport-17.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\5952f743e0d4ce30577908905a7a4a73\play-services-tasks-18.0.1\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\601e8ab7defe2fbed642b5b0c49a4f72\play-services-basement-18.0.0\AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\5ce46205cb6af9ee30ae4f07a81b88a1\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\91fd884a7772f9a5bb3c26a3f9da429a\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\b2226d933277df7bd898a6dd3d6939ac\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\eebb25cdb2e7c43b4f1d908ae9ece9fc\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\a024c2536f14c9ae87c2af7cf00b604c\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\346f57fc4638ff7cc6f4236fb8e3090d\appcompat-resources-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\504ba2b784d4cdf861ca822330d11de0\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\44e4ece62a66770ece7b986053404c2e\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\49d5acd8014469c816955a5f794e7e6c\activity-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\231cb15e1e09a4c8cebf75bd320afb61\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\9a3f545b6c455e4be483153637439e6c\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\91521e7587e408d76a82db70505c9093\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.6.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\e2b6bfd789e6411d42980160cc0af1c9\core-1.6.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\d692b4949c4602f72f1351afd24524eb\lifecycle-runtime-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\305bbc1db70ead9220beb9b9e3a90d5a\savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\d24c61a3b3ee3f176279d4584dbb6fa8\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\f3be607d64924c3d6bbbebdd506726bf\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0-rc01] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\51663c25b253c200419b11712a9835ba\documentfile-1.0.0-rc01\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0-rc01] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\4ad074ffbe5fa07a088475fb656db4a4\localbroadcastmanager-1.0.0-rc01\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0-rc01] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\16d6cd06d7f9f12bd5440a0767dcec06\print-1.0.0-rc01\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\0e6060fa886fab86e5ae1e6d6e1aedac\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\ad75db8ec934517aee6a5b96d30fc7b7\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\111c3c5f6bdb47735ea0ae628b6d0a69\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\25bc5ea503c21c3be71ef67351f3c55b\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
+INJECTED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+	package
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:3:5-34
+		INJECTED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\debug\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:1:1-64:12
+		INJECTED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\debug\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:2:5-51
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:2:5-51
+	android:versionCode
+		INJECTED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:1:1-64:12
+		INJECTED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\debug\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:9:5-66
+MERGED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:9:5-66
+MERGED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:9:5-66
+	android:name
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:9:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:10:5-78
+MERGED from [:connectivity] C:\Gentec\Gentec_Dashboard_Flutter\build\connectivity\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-79
+MERGED from [:connectivity] C:\Gentec\Gentec_Dashboard_Flutter\build\connectivity\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:10:22-76
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:11:5-79
+MERGED from [:geolocator] C:\Gentec\Gentec_Dashboard_Flutter\build\geolocator\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-79
+MERGED from [:geolocator] C:\Gentec\Gentec_Dashboard_Flutter\build\geolocator\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-79
+MERGED from [:location] C:\Gentec\Gentec_Dashboard_Flutter\build\location\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-79
+MERGED from [:location] C:\Gentec\Gentec_Dashboard_Flutter\build\location\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-79
+	android:name
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:11:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:12:5-81
+MERGED from [:location] C:\Gentec\Gentec_Dashboard_Flutter\build\location\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-81
+MERGED from [:location] C:\Gentec\Gentec_Dashboard_Flutter\build\location\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:12:22-78
+uses-permission#android.permission.ACCESS_BACKGROUND_LOCATION
+ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:13:5-84
+	android:name
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:13:22-82
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:14:5-76
+	android:name
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:14:22-74
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:15:5-77
+	android:name
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:15:22-75
+uses-permission#android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
+ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:16:5-94
+	android:name
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:16:22-92
+application
+ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:17:5-63:19
+MERGED from [:background_fetch] C:\Gentec\Gentec_Dashboard_Flutter\build\background_fetch\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-8:19
+MERGED from [:background_fetch] C:\Gentec\Gentec_Dashboard_Flutter\build\background_fetch\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-8:19
+MERGED from [:flutter_webview_plugin] C:\Gentec\Gentec_Dashboard_Flutter\build\flutter_webview_plugin\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-19:19
+MERGED from [:flutter_webview_plugin] C:\Gentec\Gentec_Dashboard_Flutter\build\flutter_webview_plugin\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-19:19
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\2d050db089454b7edff9aac5d4cee183\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\2d050db089454b7edff9aac5d4cee183\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
+MERGED from [com.google.android.gms:play-services-location:19.0.1] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\129d4228ad8dcddf02c545c0b69db7c0\play-services-location-19.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:19.0.1] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\129d4228ad8dcddf02c545c0b69db7c0\play-services-location-19.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.transistorsoft:tsbackgroundfetch:0.5.2] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\824d8d834ba8c27286d8269b9a3f7949\tsbackgroundfetch-0.5.2\AndroidManifest.xml:15:5-31:19
+MERGED from [com.transistorsoft:tsbackgroundfetch:0.5.2] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\824d8d834ba8c27286d8269b9a3f7949\tsbackgroundfetch-0.5.2\AndroidManifest.xml:15:5-31:19
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\93e7bdef658a51fcf6859519c52ee94a\play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\93e7bdef658a51fcf6859519c52ee94a\play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\b19601c99612acb2d6c7bffc8b2b817d\play-services-places-placereport-17.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\b19601c99612acb2d6c7bffc8b2b817d\play-services-places-placereport-17.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\5952f743e0d4ce30577908905a7a4a73\play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\5952f743e0d4ce30577908905a7a4a73\play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\601e8ab7defe2fbed642b5b0c49a4f72\play-services-basement-18.0.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\601e8ab7defe2fbed642b5b0c49a4f72\play-services-basement-18.0.0\AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.core:core:1.6.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\e2b6bfd789e6411d42980160cc0af1c9\core-1.6.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.6.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\e2b6bfd789e6411d42980160cc0af1c9\core-1.6.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\0e6060fa886fab86e5ae1e6d6e1aedac\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\0e6060fa886fab86e5ae1e6d6e1aedac\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.6.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\e2b6bfd789e6411d42980160cc0af1c9\core-1.6.0\AndroidManifest.xml:24:18-86
+	android:label
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:18:9-31
+	android:icon
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:20:9-43
+	tools:replace
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:19:9-38
+	android:usesCleartextTraffic
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:21:9-44
+service#com.gentecdashboard.LocationService
+ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:22:9-98
+	android:enabled
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:22:74-96
+	android:exported
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:22:50-73
+	android:name
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:22:18-49
+activity#com.gentecdashboard.MainActivity
+ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:23:9-55:20
+	android:launchMode
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:25:13-43
+	android:hardwareAccelerated
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:28:13-47
+	android:windowSoftInputMode
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:29:13-55
+	android:configChanges
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:27:13-163
+	android:theme
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:26:13-47
+	android:name
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:24:13-41
+meta-data#flutterEmbedding
+ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:34:13-36:37
+	android:value
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:36:17-34
+	android:name
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:35:17-48
+meta-data#io.flutter.embedding.android.NormalTheme
+ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:38:13-41:17
+	android:resource
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:40:15-52
+	android:name
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:39:15-70
+meta-data#io.flutter.embedding.android.SplashScreenDrawable
+ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:47:13-50:17
+	android:resource
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:49:15-61
+	android:name
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:48:15-79
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:51:13-54:29
+action#android.intent.action.MAIN
+ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:52:17-68
+	android:name
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:52:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:53:17-76
+	android:name
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:53:27-74
+receiver#com.gentecdashboard.AlarmReceiver
+ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:56:9-57:68
+	android:enabled
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:56:19-41
+	android:exported
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:57:13-36
+	android:name
+		ADDED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml:57:37-66
+uses-sdk
+INJECTED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml
+MERGED from [:background_fetch] C:\Gentec\Gentec_Dashboard_Flutter\build\background_fetch\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:background_fetch] C:\Gentec\Gentec_Dashboard_Flutter\build\background_fetch\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:geolocator] C:\Gentec\Gentec_Dashboard_Flutter\build\geolocator\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:geolocator] C:\Gentec\Gentec_Dashboard_Flutter\build\geolocator\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:google_api_availability] C:\Gentec\Gentec_Dashboard_Flutter\build\google_api_availability\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:google_api_availability] C:\Gentec\Gentec_Dashboard_Flutter\build\google_api_availability\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] C:\Gentec\Gentec_Dashboard_Flutter\build\shared_preferences\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] C:\Gentec\Gentec_Dashboard_Flutter\build\shared_preferences\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:location_permissions] C:\Gentec\Gentec_Dashboard_Flutter\build\location_permissions\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:location_permissions] C:\Gentec\Gentec_Dashboard_Flutter\build\location_permissions\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:webview_flutter] C:\Gentec\Gentec_Dashboard_Flutter\build\webview_flutter\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:webview_flutter] C:\Gentec\Gentec_Dashboard_Flutter\build\webview_flutter\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:flutter_webview_plugin] C:\Gentec\Gentec_Dashboard_Flutter\build\flutter_webview_plugin\intermediates\library_manifest\debug\AndroidManifest.xml:6:5-44
+MERGED from [:flutter_webview_plugin] C:\Gentec\Gentec_Dashboard_Flutter\build\flutter_webview_plugin\intermediates\library_manifest\debug\AndroidManifest.xml:6:5-44
+MERGED from [:connectivity] C:\Gentec\Gentec_Dashboard_Flutter\build\connectivity\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:connectivity] C:\Gentec\Gentec_Dashboard_Flutter\build\connectivity\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:fluttertoast] C:\Gentec\Gentec_Dashboard_Flutter\build\fluttertoast\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:fluttertoast] C:\Gentec\Gentec_Dashboard_Flutter\build\fluttertoast\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:location] C:\Gentec\Gentec_Dashboard_Flutter\build\location\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:location] C:\Gentec\Gentec_Dashboard_Flutter\build\location\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:permission_handler] C:\Gentec\Gentec_Dashboard_Flutter\build\permission_handler\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:permission_handler] C:\Gentec\Gentec_Dashboard_Flutter\build\permission_handler\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:background_locator] C:\Gentec\Gentec_Dashboard_Flutter\build\background_locator\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:background_locator] C:\Gentec\Gentec_Dashboard_Flutter\build\background_locator\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\e99863ae273117549019adfb26e7bdb2\window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\e99863ae273117549019adfb26e7bdb2\window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\2d050db089454b7edff9aac5d4cee183\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\2d050db089454b7edff9aac5d4cee183\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-location:19.0.1] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\129d4228ad8dcddf02c545c0b69db7c0\play-services-location-19.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:19.0.1] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\129d4228ad8dcddf02c545c0b69db7c0\play-services-location-19.0.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\1764337dee95b0b9171965ccf7699359\multidex-2.0.0\AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\1764337dee95b0b9171965ccf7699359\multidex-2.0.0\AndroidManifest.xml:20:5-43
+MERGED from [androidx.room:room-runtime:2.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\7e0100f91b1ca0b1404a186bf812ef98\room-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-runtime:2.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\7e0100f91b1ca0b1404a186bf812ef98\room-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.transistorsoft:tsbackgroundfetch:0.5.2] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\824d8d834ba8c27286d8269b9a3f7949\tsbackgroundfetch-0.5.2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.transistorsoft:tsbackgroundfetch:0.5.2] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\824d8d834ba8c27286d8269b9a3f7949\tsbackgroundfetch-0.5.2\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\db3bef0bbb0a8c88bceb752b3adef88c\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\db3bef0bbb0a8c88bceb752b3adef88c\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\93e7bdef658a51fcf6859519c52ee94a\play-services-base-18.0.1\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\93e7bdef658a51fcf6859519c52ee94a\play-services-base-18.0.1\AndroidManifest.xml:18:5-43
+MERGED from [androidx.webkit:webkit:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\494c6c56780b149f40f023734474a57c\webkit-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.webkit:webkit:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\494c6c56780b149f40f023734474a57c\webkit-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\15517014842b6fbc0c15263fc091b3e8\sqlite-framework-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\15517014842b6fbc0c15263fc091b3e8\sqlite-framework-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\ff306e121793bf8e564ccfb4bc007ca3\sqlite-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\ff306e121793bf8e564ccfb4bc007ca3\sqlite-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0-rc01] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\4c451ab1ebcfc5a7e3b3331ddf5ef6a5\legacy-support-core-utils-1.0.0-rc01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0-rc01] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\4c451ab1ebcfc5a7e3b3331ddf5ef6a5\legacy-support-core-utils-1.0.0-rc01\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\b19601c99612acb2d6c7bffc8b2b817d\play-services-places-placereport-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\b19601c99612acb2d6c7bffc8b2b817d\play-services-places-placereport-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\5952f743e0d4ce30577908905a7a4a73\play-services-tasks-18.0.1\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\5952f743e0d4ce30577908905a7a4a73\play-services-tasks-18.0.1\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\601e8ab7defe2fbed642b5b0c49a4f72\play-services-basement-18.0.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\601e8ab7defe2fbed642b5b0c49a4f72\play-services-basement-18.0.0\AndroidManifest.xml:18:5-43
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\5ce46205cb6af9ee30ae4f07a81b88a1\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\5ce46205cb6af9ee30ae4f07a81b88a1\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\91fd884a7772f9a5bb3c26a3f9da429a\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\91fd884a7772f9a5bb3c26a3f9da429a\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\b2226d933277df7bd898a6dd3d6939ac\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\b2226d933277df7bd898a6dd3d6939ac\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\eebb25cdb2e7c43b4f1d908ae9ece9fc\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\eebb25cdb2e7c43b4f1d908ae9ece9fc\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\a024c2536f14c9ae87c2af7cf00b604c\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\a024c2536f14c9ae87c2af7cf00b604c\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\346f57fc4638ff7cc6f4236fb8e3090d\appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\346f57fc4638ff7cc6f4236fb8e3090d\appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\504ba2b784d4cdf861ca822330d11de0\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\504ba2b784d4cdf861ca822330d11de0\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\44e4ece62a66770ece7b986053404c2e\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\44e4ece62a66770ece7b986053404c2e\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\49d5acd8014469c816955a5f794e7e6c\activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\49d5acd8014469c816955a5f794e7e6c\activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\231cb15e1e09a4c8cebf75bd320afb61\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\231cb15e1e09a4c8cebf75bd320afb61\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\9a3f545b6c455e4be483153637439e6c\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\9a3f545b6c455e4be483153637439e6c\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\91521e7587e408d76a82db70505c9093\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\91521e7587e408d76a82db70505c9093\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.6.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\e2b6bfd789e6411d42980160cc0af1c9\core-1.6.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.6.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\e2b6bfd789e6411d42980160cc0af1c9\core-1.6.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\d692b4949c4602f72f1351afd24524eb\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\d692b4949c4602f72f1351afd24524eb\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\305bbc1db70ead9220beb9b9e3a90d5a\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\305bbc1db70ead9220beb9b9e3a90d5a\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\d24c61a3b3ee3f176279d4584dbb6fa8\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\d24c61a3b3ee3f176279d4584dbb6fa8\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\f3be607d64924c3d6bbbebdd506726bf\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\f3be607d64924c3d6bbbebdd506726bf\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0-rc01] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\51663c25b253c200419b11712a9835ba\documentfile-1.0.0-rc01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0-rc01] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\51663c25b253c200419b11712a9835ba\documentfile-1.0.0-rc01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0-rc01] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\4ad074ffbe5fa07a088475fb656db4a4\localbroadcastmanager-1.0.0-rc01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0-rc01] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\4ad074ffbe5fa07a088475fb656db4a4\localbroadcastmanager-1.0.0-rc01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0-rc01] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\16d6cd06d7f9f12bd5440a0767dcec06\print-1.0.0-rc01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0-rc01] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\16d6cd06d7f9f12bd5440a0767dcec06\print-1.0.0-rc01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\0e6060fa886fab86e5ae1e6d6e1aedac\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\0e6060fa886fab86e5ae1e6d6e1aedac\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\ad75db8ec934517aee6a5b96d30fc7b7\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\ad75db8ec934517aee6a5b96d30fc7b7\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\111c3c5f6bdb47735ea0ae628b6d0a69\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\111c3c5f6bdb47735ea0ae628b6d0a69\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\25bc5ea503c21c3be71ef67351f3c55b\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\25bc5ea503c21c3be71ef67351f3c55b\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+INJECTED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\debug\AndroidManifest.xml
+INJECTED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\debug\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\debug\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Gentec\Gentec_Dashboard_Flutter\android\app\src\debug\AndroidManifest.xml
+provider#androidx.core.content.FileProvider
+ADDED from [:flutter_webview_plugin] C:\Gentec\Gentec_Dashboard_Flutter\build\flutter_webview_plugin\intermediates\library_manifest\debug\AndroidManifest.xml:9:9-18:20
+	android:grantUriPermissions
+		ADDED from [:flutter_webview_plugin] C:\Gentec\Gentec_Dashboard_Flutter\build\flutter_webview_plugin\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-47
+	android:authorities
+		ADDED from [:flutter_webview_plugin] C:\Gentec\Gentec_Dashboard_Flutter\build\flutter_webview_plugin\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-64
+	android:exported
+		ADDED from [:flutter_webview_plugin] C:\Gentec\Gentec_Dashboard_Flutter\build\flutter_webview_plugin\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-37
+	tools:replace
+		ADDED from [:flutter_webview_plugin] C:\Gentec\Gentec_Dashboard_Flutter\build\flutter_webview_plugin\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-48
+	android:name
+		ADDED from [:flutter_webview_plugin] C:\Gentec\Gentec_Dashboard_Flutter\build\flutter_webview_plugin\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-62
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:flutter_webview_plugin] C:\Gentec\Gentec_Dashboard_Flutter\build\flutter_webview_plugin\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-17:53
+	android:resource
+		ADDED from [:flutter_webview_plugin] C:\Gentec\Gentec_Dashboard_Flutter\build\flutter_webview_plugin\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-50
+	android:name
+		ADDED from [:flutter_webview_plugin] C:\Gentec\Gentec_Dashboard_Flutter\build\flutter_webview_plugin\intermediates\library_manifest\debug\AndroidManifest.xml:16:17-67
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\2d050db089454b7edff9aac5d4cee183\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\2d050db089454b7edff9aac5d4cee183\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\2d050db089454b7edff9aac5d4cee183\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\2d050db089454b7edff9aac5d4cee183\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\2d050db089454b7edff9aac5d4cee183\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\2d050db089454b7edff9aac5d4cee183\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from [com.transistorsoft:tsbackgroundfetch:0.5.2] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\824d8d834ba8c27286d8269b9a3f7949\tsbackgroundfetch-0.5.2\AndroidManifest.xml:11:5-81
+	android:name
+		ADDED from [com.transistorsoft:tsbackgroundfetch:0.5.2] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\824d8d834ba8c27286d8269b9a3f7949\tsbackgroundfetch-0.5.2\AndroidManifest.xml:11:22-78
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.transistorsoft:tsbackgroundfetch:0.5.2] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\824d8d834ba8c27286d8269b9a3f7949\tsbackgroundfetch-0.5.2\AndroidManifest.xml:12:5-68
+	android:name
+		ADDED from [com.transistorsoft:tsbackgroundfetch:0.5.2] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\824d8d834ba8c27286d8269b9a3f7949\tsbackgroundfetch-0.5.2\AndroidManifest.xml:12:22-65
+uses-permission#android.permission.GET_TASKS
+ADDED from [com.transistorsoft:tsbackgroundfetch:0.5.2] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\824d8d834ba8c27286d8269b9a3f7949\tsbackgroundfetch-0.5.2\AndroidManifest.xml:13:5-68
+	android:name
+		ADDED from [com.transistorsoft:tsbackgroundfetch:0.5.2] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\824d8d834ba8c27286d8269b9a3f7949\tsbackgroundfetch-0.5.2\AndroidManifest.xml:13:22-65
+receiver#com.transistorsoft.tsbackgroundfetch.FetchAlarmReceiver
+ADDED from [com.transistorsoft:tsbackgroundfetch:0.5.2] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\824d8d834ba8c27286d8269b9a3f7949\tsbackgroundfetch-0.5.2\AndroidManifest.xml:16:9-92
+	android:name
+		ADDED from [com.transistorsoft:tsbackgroundfetch:0.5.2] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\824d8d834ba8c27286d8269b9a3f7949\tsbackgroundfetch-0.5.2\AndroidManifest.xml:16:19-89
+service#com.transistorsoft.tsbackgroundfetch.FetchJobService
+ADDED from [com.transistorsoft:tsbackgroundfetch:0.5.2] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\824d8d834ba8c27286d8269b9a3f7949\tsbackgroundfetch-0.5.2\AndroidManifest.xml:18:9-21:72
+	android:exported
+		ADDED from [com.transistorsoft:tsbackgroundfetch:0.5.2] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\824d8d834ba8c27286d8269b9a3f7949\tsbackgroundfetch-0.5.2\AndroidManifest.xml:20:13-36
+	android:permission
+		ADDED from [com.transistorsoft:tsbackgroundfetch:0.5.2] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\824d8d834ba8c27286d8269b9a3f7949\tsbackgroundfetch-0.5.2\AndroidManifest.xml:21:13-69
+	android:name
+		ADDED from [com.transistorsoft:tsbackgroundfetch:0.5.2] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\824d8d834ba8c27286d8269b9a3f7949\tsbackgroundfetch-0.5.2\AndroidManifest.xml:19:13-80
+receiver#com.transistorsoft.tsbackgroundfetch.BootReceiver
+ADDED from [com.transistorsoft:tsbackgroundfetch:0.5.2] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\824d8d834ba8c27286d8269b9a3f7949\tsbackgroundfetch-0.5.2\AndroidManifest.xml:23:9-30:20
+	android:exported
+		ADDED from [com.transistorsoft:tsbackgroundfetch:0.5.2] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\824d8d834ba8c27286d8269b9a3f7949\tsbackgroundfetch-0.5.2\AndroidManifest.xml:25:13-37
+	android:name
+		ADDED from [com.transistorsoft:tsbackgroundfetch:0.5.2] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\824d8d834ba8c27286d8269b9a3f7949\tsbackgroundfetch-0.5.2\AndroidManifest.xml:24:13-77
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.MY_PACKAGE_REPLACED
+ADDED from [com.transistorsoft:tsbackgroundfetch:0.5.2] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\824d8d834ba8c27286d8269b9a3f7949\tsbackgroundfetch-0.5.2\AndroidManifest.xml:26:13-29:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from [com.transistorsoft:tsbackgroundfetch:0.5.2] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\824d8d834ba8c27286d8269b9a3f7949\tsbackgroundfetch-0.5.2\AndroidManifest.xml:27:17-79
+	android:name
+		ADDED from [com.transistorsoft:tsbackgroundfetch:0.5.2] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\824d8d834ba8c27286d8269b9a3f7949\tsbackgroundfetch-0.5.2\AndroidManifest.xml:27:25-76
+action#android.intent.action.MY_PACKAGE_REPLACED
+ADDED from [com.transistorsoft:tsbackgroundfetch:0.5.2] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\824d8d834ba8c27286d8269b9a3f7949\tsbackgroundfetch-0.5.2\AndroidManifest.xml:28:17-84
+	android:name
+		ADDED from [com.transistorsoft:tsbackgroundfetch:0.5.2] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\824d8d834ba8c27286d8269b9a3f7949\tsbackgroundfetch-0.5.2\AndroidManifest.xml:28:25-81
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\93e7bdef658a51fcf6859519c52ee94a\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\93e7bdef658a51fcf6859519c52ee94a\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\93e7bdef658a51fcf6859519c52ee94a\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\93e7bdef658a51fcf6859519c52ee94a\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\601e8ab7defe2fbed642b5b0c49a4f72\play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\601e8ab7defe2fbed642b5b0c49a4f72\play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Yasir\.gradle\caches\transforms-2\files-2.1\601e8ab7defe2fbed642b5b0c49a4f72\play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
