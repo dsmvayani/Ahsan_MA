@@ -12,6 +12,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
 import '../../auth/form_submission_status.dart';
+import '../../session_view.dart';
 import '../../widget/DrawermenuWidget.dart';
 import '../../widget/MyShimmerEffectUI.dart';
 
@@ -26,6 +27,7 @@ class ProductList extends StatefulWidget {
 class _ProductListState extends State<ProductList> {
   TextEditingController editingController = TextEditingController();
   bool isShowClose = false;
+  List<String> _filters = [];
   @override
   void initState() {
     super.initState();
@@ -53,22 +55,13 @@ class _ProductListState extends State<ProductList> {
         ),
         title: Text('Product List'),
         actions: [
-          // IconButton(
-          //     icon: const Icon(Icons.add),
-          //     tooltip: "Open Customer Save",
-          //     onPressed: () {
-          //       Navigator.of(context)
-          //           .push(MaterialPageRoute(builder: (_) => AddCustomer()));
-          //     }),
-          // Padding(
-          //   padding: const EdgeInsets.only(right: 10.0),
-          //   child: IconButton(
-          //       icon: const Icon(Icons.sync),
-          //       tooltip: "Sync Customers",
-          //       onPressed: () {
-          //         showSync(context);
-          //       }),
-          // )
+          IconButton(
+              icon: const Icon(Icons.home),
+              tooltip: "Dashboard",
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (_) => SessionView()));
+              }),
         ],
       ),
       body: RefreshIndicator(
@@ -77,6 +70,10 @@ class _ProductListState extends State<ProductList> {
         child: SafeArea(
           child: BlocBuilder<ProductBloc, ProductState>(
             builder: (context, state) {
+              final ids = Set();
+              List<ProductState> xList = state.list1!.toList();
+              xList.retainWhere((x) => ids.add(x.nAttribute1Image));
+              // state.list1!.retainWhere((x) => ids.add(x.nAttribute1Image));
               return Column(
                 children: [
                   Padding(
@@ -84,8 +81,8 @@ class _ProductListState extends State<ProductList> {
                     child: TextField(
                       onChanged: (value) {
                         value.length > 0
-                            ? callProductsOffline(value, state.list!, state.list1!)
-                            : callProductsOffline('', state.list!, state.list1!);
+                            ? callProductsOffline(value, state.list!, state.list1!, false)
+                            : callProductsOffline('', state.list!, state.list1!, false);
                       },
                       controller: editingController,
                       decoration: InputDecoration(
@@ -96,6 +93,7 @@ class _ProductListState extends State<ProductList> {
                           suffixIcon: isShowClose
                               ? IconButton(
                                   icon: Icon(Icons.close),
+                                  color: MyConstants.of(context)!.primaryColor,
                                   onPressed: () {
                                     editingController.clear();
                                     FocusManager.instance.primaryFocus
@@ -107,6 +105,49 @@ class _ProductListState extends State<ProductList> {
                           border: OutlineInputBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(25.0)))),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 80,
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left:10, right: 40),
+                        child: Wrap(
+                          spacing: 30,
+                        children:  ids.map((e) =>
+                            Transform(
+                              transform: new Matrix4.identity()..scale(2.0),
+                              child: FilterChip(
+                                  materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                                showCheckmark: true,
+                                selectedColor: Colors.transparent,
+                                checkmarkColor: Colors.white,
+                                  avatar: CircleAvatar(
+                                    radius: 25,
+                                      child: Container(child: e.length > 1 ? Image.memory(base64Decode(e), width: 500, height: 500,) : Text(''))
+                                  ),
+                                  label: Text(''),
+                                  backgroundColor: Colors.transparent,
+              labelPadding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                  selected: _filters.contains(e),
+                                  onSelected: (bool selected) {
+                                    setState(() {
+                                      if(selected){
+                                        _filters.add(e);
+                                      }
+                                      else{
+                                        _filters.removeWhere((String name) {
+                                          return name == e;
+                                        });
+                                      }
+                                    });
+                                      callProductsOffline('', state.list!, state.list1!, true);
+                                  }),
+                            )
+                        ).toList().toList()
+                        ),
+                      ),
                     ),
                   ),
                   Expanded(
@@ -177,41 +218,23 @@ class _ProductListState extends State<ProductList> {
               children: [
                 Text("Barcode: "+obj.nBarcode),
                 Text("Sales Rate: "+obj.nSalesRate.toString()),
-                // obj.nBarcode.isNotEmpty
-                //     ? RichText(
-                //         text: TextSpan( children: [
-                //         TextSpan(
-                //             text: "Barcode:  ",
-                //             style: TextStyle(color: Colors.grey[700])),
-                //         TextSpan(
-                //             text: obj.nBarcode,
-                //             style: TextStyle(color: Colors.black))
-                //       ]))
-                //     : Container(),
-                // obj.nSalesRate >= 0
-                //     ? Expanded(
-                //         child: RichText(
-                //             overflow: TextOverflow.ellipsis,
-                //             text: TextSpan(children: [
-                //               TextSpan(
-                //                   text: "Sales Rate:  ",
-                //                   style: TextStyle(color: Colors.grey[700])),
-                //               TextSpan(
-                //                   text: obj.nSalesRate.toString(),
-                //                   style: TextStyle(color: Colors.black))
-                //             ])),
-                //       )
-                //     : Container(),
               ],
             ),
            ]),
         ),
       );
-  void callProductsOffline(String query, List<ProductState> _list, List<ProductState> _list1) {
-    if (query.length > 0) {
+  void callProductsOffline(String query, List<ProductState> _list, List<ProductState> _list1, bool isFilter) {
+    if (query.length > 0 && !isFilter) {
       isShowClose = true;
-      _list = _list1.where((element) => element.nBarcode.toLowerCase().contains(query.toLowerCase())).toList();
-    } else {
+      _list = _list1.where((element) => element.nAttribute.toLowerCase().contains(query.toLowerCase())).toList();
+    }
+    else if(query.length > 0 && isFilter && _filters.length > 0){
+      _list = _list1.where((element) => element.nAttribute.toLowerCase().contains(query.toLowerCase()) && _filters.contains(element.nAttribute1Image)).toList();
+    }
+    else if(query.length < 1 && isFilter && _filters.length > 0){
+      _list = _list1.where((element) => _filters.contains(element.nAttribute1Image)).toList();
+    }
+    else {
       isShowClose = false;
       _list = _list1;
     }

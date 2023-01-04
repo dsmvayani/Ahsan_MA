@@ -15,7 +15,7 @@ Future<Response?> getData(String nSPNAME, List<String> nReportQueryParameters, L
       var data = jsonEncode({ 'SPNAME': nSPNAME, 'ReportQueryParameters': nReportQueryParameters, 'ReportQueryValue': nReportQueryValue });
       dio.options.headers['Authorization'] = 'Bearer ' + await SharedPreferencesConfig.getToken();
       dio.options.headers['Content-Type'] = 'application/json';
-      Response response = await dio.post( api + "api/Users/GetData", data: data);
+      Response response = await dio.post( api + "Users/GetData", data: data);
       return response;
     } catch (error) {
       return null;

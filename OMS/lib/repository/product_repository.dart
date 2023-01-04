@@ -16,7 +16,7 @@ class ProductRepository {
           'Bearer ' + await SharedPreferencesConfig.getToken();
       dio.options.headers['Content-Type'] = 'application/json';
       Response response = await dio.get(
-          api + "api/BSProOMS/GetDashboardData");
+          api + "/BSProOMS/GetDashboardData");
       return response;
     }
     catch (error) {
@@ -30,8 +30,8 @@ Future<Response?> getData(String nSPNAME, List<String> nReportQueryParameters, L
       var data = jsonEncode({ 'SPNAME': nSPNAME, 'ReportQueryParameters': nReportQueryParameters, 'ReportQueryValue': nReportQueryValue });
       dio.options.headers['Authorization'] = 'Bearer ' + await SharedPreferencesConfig.getToken();
       dio.options.headers['Content-Type'] = 'application/json';
-      // const response = await this.http.post(this.baseUrl + 'api/Users/GetData', data, { headers: reqHeader }).toPromise();
-      Response response = await dio.post( api + "api/Users/GetData", data: data);
+      // const response = await this.http.post(this.baseUrl + '/Users/GetData', data, { headers: reqHeader }).toPromise();
+      Response response = await dio.post( api + "Users/GetData", data: data);
       return response;
     } catch (error) {
       return null;

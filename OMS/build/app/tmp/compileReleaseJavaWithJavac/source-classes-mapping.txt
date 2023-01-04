@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/gentec/BSProOMS/BuildConfig.java
+ com.gentec.BSProOMS.BuildConfig

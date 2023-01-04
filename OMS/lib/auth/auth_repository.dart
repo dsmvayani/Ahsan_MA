@@ -31,9 +31,10 @@ class AuthRepository{
       Dio dio = new Dio();
       dio.options.headers['Content-Type'] = 'application/json';
       dio.options.headers['No-Auth'] = 'True';
-      Response response = await dio.post(api+"api/Values/authenticate", data: data);
+      Response response = await dio.post(api+"Values/authenticate", data: data);
       var token = response.data["token"];
-      User user = User(nUserID: userId, nUserCode: '', nUserPassword: password, nUserName: response.data["username"], nCustomerCode: response.data["customerCode"], nUserType: response.data["userType"], nLoginStatus: !response.data["loginStatus"]);
+      var nUsername = response.data["username"] ?? userId;
+      User user = User(nUserID: userId, nUserCode: '', nUserPassword: password, nUserName: nUsername, nCustomerCode: response.data["customerCode"], nUserType: response.data["userType"], nLoginStatus: !response.data["loginStatus"]);
       SharedPreferencesConfig.setUser(user.toJson());
       SharedPreferencesConfig.setScreenChangeable(false);
       // var refreshtoken = response.data["refresh_token"];
@@ -61,7 +62,7 @@ class AuthRepository{
       Dio dio = new Dio();
       dio.options.headers['Content-Type'] = 'application/json';
       dio.options.headers['No-Auth'] = 'True';
-      Response response = await dio.post(api+"api/BSProOMS/RegisterUser", data: data);
+      Response response = await dio.post(api+"/BSProOMS/RegisterUser", data: data);
       if(response.statusCode == 200){
         return true;
       }
@@ -84,7 +85,7 @@ class AuthRepository{
       var data = jsonEncode({ 'SPNAME': nSPNAME, 'ReportQueryParameters': nReportQueryParameters, 'ReportQueryValue': nReportQueryValue });
       dio.options.headers['Authorization'] = 'Bearer ' + await SharedPreferencesConfig.getToken();
       dio.options.headers['Content-Type'] = 'application/json';
-      Response response = await dio.post( api + "api/Users/GetData", data: data);
+      Response response = await dio.post( api + "/Users/GetData", data: data);
       return response;
     } catch (error) {
       return null;

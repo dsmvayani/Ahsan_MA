@@ -11,6 +11,7 @@ import '../../../auth/form_submission_status.dart';
 
 class SaleOrderState{
   final String customerName;
+  final String billNo;
   final String billDate;
   final CustomerState? customer;
   final SalesManTab? salesManTab;
@@ -27,6 +28,7 @@ class SaleOrderState{
 
   SaleOrderState({
     this.isSync = false,
+    this.billNo = '',
     this.customerName = '',
     this.billDate = '',
     this.description = '',
@@ -45,6 +47,7 @@ class SaleOrderState{
   SaleOrderState copyWith({
     bool? isSync,
      String? customerName,
+     String? billNo,
      String? billDate,
      String? description,
     CustomerState? customerState,
@@ -60,6 +63,7 @@ class SaleOrderState{
     }) {
       return SaleOrderState(
         isSync: isSync ?? this.isSync,
+        billNo: billNo ?? this.billNo,
         customerName: customerName ?? this.customerName,
         billDate: billDate ?? this.billDate,
         description: description ?? this.description,

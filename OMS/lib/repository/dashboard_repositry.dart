@@ -14,7 +14,7 @@ class DashboardRepository {
           'Bearer ' + await SharedPreferencesConfig.getToken();
       dio.options.headers['Content-Type'] = 'application/json';
       Response response = await dio.get(
-          api + "api/BSProOMS/GetDashboardData");
+          api + "BSProOMS/GetDashboardData");
       return response;
     }
     catch (error) {

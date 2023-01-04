@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 import '../../auth/form_submission_status.dart';
 import '../../data/Constants.dart';
+import '../../session_view.dart';
 import '../../widget/DrawermenuWidget.dart';
 import '../../widget/MyShimmerEffectUI.dart';
 import 'cubit/ledger_bloc.dart';
@@ -40,6 +41,15 @@ class _LedgerPageState extends State<LedgerPage> {
             onClicked: widget.openDrawer,
           ),
           title: Text('Ledger Detail'),
+          actions: [
+            IconButton(
+                icon: const Icon(Icons.home),
+                tooltip: "Dashboard",
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (_) => SessionView()));
+                }),
+          ],
         ),
         body: RefreshIndicator(
         color: MyConstants.of(context)!.primaryColor,
@@ -90,71 +100,44 @@ class _LedgerPageState extends State<LedgerPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Expanded(flex: 30, child: Text("Account Code")),
-                    Expanded(flex: 40, child: Text("Account")),
-                    Expanded(flex: 30, child: Text("Amount")),
+                    // Expanded(flex: 30, child: Text("Account Code")),
+                    // Expanded(flex: 40, child: Text("Account")),
+                    Expanded(flex: 50, child: Text("Trans Date: "+DateFormat.yMMMd().format( getDateFormat(obj['TransDate'])))),
+                    Expanded(flex: 50, child: Text("V Type Code: "+obj['VoucherTypeCode'].toString())),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Expanded(flex: 30, child: Text(obj['AccountCode'].toString(),style: TextStyle(fontWeight: FontWeight.bold, color: obj['Amount'] < 0 ? Colors.redAccent : Colors.black54),)),
-                    Expanded(flex: 40, child: Text(obj['Account'].toString(),style: TextStyle(fontWeight: FontWeight.bold, color: obj['Amount'] < 0 ? Colors.redAccent : Colors.black54))),
-                    Expanded(flex: 30, child: Text(obj['Amount'].toString(),style: TextStyle(fontWeight: FontWeight.bold, color: obj['Amount'] < 0 ? Colors.redAccent : Colors.black54))),
+                    // Expanded(flex: 30, child: Text(obj['AccountCode'].toString(),style: TextStyle(fontWeight: FontWeight.bold, color: obj['Amount'] < 0 ? Colors.redAccent : Colors.black54),)),
+                    // Expanded(flex: 40, child: Text(obj['Account'].toString(),style: TextStyle(fontWeight: FontWeight.bold, color: obj['Amount'] < 0 ? Colors.redAccent : Colors.black54))),
+                    Expanded(flex: 50, child: Text(DateFormat.yMMMd().format( getDateFormat(obj['TransDate'])),style: TextStyle(fontWeight: FontWeight.bold, color: obj['Amount'] < 0 ? Colors.redAccent : Colors.black54))),
+                    Expanded(flex: 50, child: Text(obj['VoucherTypeCode'].toString(),style: TextStyle(fontWeight: FontWeight.bold, color: obj['Amount'] < 0 ? Colors.redAccent : Colors.black54))),
                   ],
                 ),
                 SizedBox(height: 10,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Expanded(flex: 30, child: Text("Trans Date")),
-                    Expanded(flex: 40, child: Text("V Type Code")),
+
                     Expanded(flex: 30, child: Text("Voucher")),
+                    Expanded(flex: 30, child: Text("Amount")),
+
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     // Expanded(flex: 33, child: Text(obj['TransDate'].toString(),style: TextStyle(fontWeight: FontWeight.bold))),
-                    Expanded(flex: 30, child: Text(DateFormat.yMMMd().format( getDateFormat(obj['TransDate'])),style: TextStyle(fontWeight: FontWeight.bold, color: obj['Amount'] < 0 ? Colors.redAccent : Colors.black54))),
-                    Expanded(flex: 40, child: Text(obj['VoucherTypeCode'].toString(),style: TextStyle(fontWeight: FontWeight.bold, color: obj['Amount'] < 0 ? Colors.redAccent : Colors.black54))),
                     Expanded(flex: 30, child: Text(obj['VoucherNo'].toString(),style: TextStyle(fontWeight: FontWeight.bold, color: obj['Amount'] < 0 ? Colors.redAccent : Colors.black54))),
+                    Expanded(flex: 30, child: Text(obj['Amount'].toString(),style: TextStyle(fontWeight: FontWeight.bold, color: obj['Amount'] < 0 ? Colors.redAccent : Colors.black54))),
                   ],
                 ),
               ],
             ),
           ),
         ),);
-              // [
 
-           //  Row(
-           //    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-           //    children: <Widget>[...getListHeader(obj)],
-           //  ),
-           //  // Row(
-           //  //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-           //  //   children: <Widget>[...getListValue(obj)],
-           //  // ),
-           //  Row(
-           //    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-           //    children: [
-           //      Text((obj[0] as HashMap).keys.first),
-           //      Text(obj[1].value.toString()),
-           //      Text(obj[2].value.toString()),
-           //    ],
-           //  ),
-           //  Row(
-           //    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-           //    children: [
-           //      Text(obj[3].value.toString()),
-           //      Text(obj[4].value.toString()),
-           //      Text(obj[5].value.toString()),
-           //    ],
-           //  ),
-           // ]
-      //     ),
-      //   ),
-      // );
   DateTime getDateFormat(dynamic date){
     var raw = date.toString();
 
