@@ -58,13 +58,13 @@ class _RegisterNewState extends State<RegisterNew> {
 
   @override
   void initState() {
-    getDefaultMobileCode();
-    textEditingController1 = TextEditingController();
-    initSmsListener();
+   // getDefaultMobileCode();
+   // textEditingController1 = TextEditingController();
+   // initSmsListener();
     super.initState();
   }
 
-  getDefaultMobileCode() async {
+  /*getDefaultMobileCode() async {
     try {
       final Response? response = await AuthRepository()
           .getData("GEN_BSProOMSSP", ['@nType', '@nsType'], ['0', '11']);
@@ -105,7 +105,7 @@ class _RegisterNewState extends State<RegisterNew> {
       print("====>Code: ${textEditingController1.text}");
       otpCode = textEditingController1.text;
     });
-  }
+  }*/
 
   @override
   Widget build(BuildContext context) {
@@ -712,7 +712,7 @@ class _RegisterNewState extends State<RegisterNew> {
 
   @override
   void dispose() {
-    textEditingController1.dispose();
+   // textEditingController1.dispose();
     // AltSmsAutofill().unregisterListener();
     super.dispose();
   }

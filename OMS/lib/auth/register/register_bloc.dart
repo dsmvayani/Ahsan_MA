@@ -65,10 +65,14 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
       // emit(state.copyWith(formStatus: FormSubmitting()));
       var myVerificationId = "";
       try {
-        FirebaseAuth firebaseAuth = FirebaseAuth.instance;
+        print('-->1');
+        //firebase code
+        /*FirebaseAuth firebaseAuth = FirebaseAuth.instance;
         firebaseAuth.verifyPhoneNumber(
             phoneNumber: state.contactNo,
-            verificationCompleted: (PhoneAuthCredential credential) async {},
+            verificationCompleted: (PhoneAuthCredential credential) async {
+              print('-->2');
+            },
             verificationFailed: (FirebaseAuthException exception) {
               Fluttertoast.showToast( msg: exception.message.toString(), toastLength: Toast.LENGTH_SHORT, gravity: ToastGravity.BOTTOM, timeInSecForIosWeb: 1, backgroundColor: Colors.red, textColor: Colors.white, fontSize: 16.0 );
               // print(exception.message);
@@ -79,8 +83,10 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
                   formStatus: SubmissionSuccess()));
               // verificationIdRecieved = verificationId;
             },
-            codeAutoRetrievalTimeout: (String verificationId) {});
+            codeAutoRetrievalTimeout: (String verificationId) {});*/
+
       } catch (e) {
+        print('-->3');
         emit(state.copyWith(formStatus: SubmissionFailed(new Exception(e))));
         // emit(state.copyWith(formStatus: SubmissionFailed(e.toString())));
       }
@@ -93,18 +99,23 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
           if (isRegister) {
             final isLogin =
             await authRepo.login(state.contactNo, state.password);
+            print('-->5');
             if (isLogin) {
               final token = await SharedPreferencesConfig.getToken();
               emit(state.copyWith(formStatus: SubmissionSuccess()));
               authCubit.launchSession(
                   AuthCredentials(userId: state.contactNo, token: token));
+              print('-->4');
             } else {
+              print('-->6');
               emit(state.copyWith(
                   formStatus: SubmissionFailed(new Exception("Login Failed"))));
             }
             emit(state.copyWith(formStatus: SubmissionSuccess()));
+            print('-->Login Failed ');
           }
         else{
+            Fluttertoast.showToast( msg: 'registeration failed', toastLength: Toast.LENGTH_SHORT, gravity: ToastGravity.BOTTOM, timeInSecForIosWeb: 1, backgroundColor: Colors.red, textColor: Colors.white, fontSize: 16.0 );
           emit(state.copyWith(
               formStatus: SubmissionFailed(new Exception("Registration Failed"))));
         }
