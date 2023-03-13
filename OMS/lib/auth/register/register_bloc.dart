@@ -28,16 +28,22 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
     } else if (event is RegisterContactNoChanged) {
       emit(state.copyWith(contactNo: event.contactNo));
     } else if (event is VerificationCode1Change) {
+      debugPrint( '----> code 1: ${event.code}');
       emit(state.copyWith(verifyCode1: event.code));
     } else if (event is VerificationCode2Change) {
+      debugPrint( '----> code 2: ${event.code}');
       emit(state.copyWith(verifyCode2: event.code));
     } else if (event is VerificationCode3Change) {
+      debugPrint( '----> code 3: ${event.code}');
       emit(state.copyWith(verifyCode3: event.code));
     } else if (event is VerificationCode4Change) {
+      debugPrint( '----> code 4: ${event.code}');
       emit(state.copyWith(verifyCode4: event.code));
     } else if (event is VerificationCode5Change) {
+      debugPrint( '----> code 5: ${event.code}');
       emit(state.copyWith(verifyCode5: event.code));
     } else if (event is VerificationCode6Change) {
+      debugPrint( '----> code 6: ${event.code}');
       emit(state.copyWith(verifyCode6: event.code));
     } else if (event is VerificationCode1Change) {
       emit(state.copyWith(verifyCode1: event.code));
@@ -64,6 +70,7 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
     } else if (event is VerificationProcess) {
       // emit(state.copyWith(formStatus: FormSubmitting()));
       var myVerificationId = "";
+      print('-->2');
       try {
         print('-->1');
         //firebase code
@@ -95,7 +102,7 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
         // if(state.nVerificationId!.isEmpty){emit(state.copyWith(formStatus: SubmissionFailed(new Exception("Not Allowed to register"))));}
         emit(state.copyWith(formStatus: FormSubmitting()));
           final isRegister = await authRepo.registerUser(
-              state.shopName, state.contactNo, state.password);
+              '${state.shopName}', '${state.contactNo}', '${state.password}');
           if (isRegister) {
             final isLogin =
             await authRepo.login(state.contactNo, state.password);
@@ -115,7 +122,7 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
             print('-->Login Failed ');
           }
         else{
-            Fluttertoast.showToast( msg: 'registeration failed', toastLength: Toast.LENGTH_SHORT, gravity: ToastGravity.BOTTOM, timeInSecForIosWeb: 1, backgroundColor: Colors.red, textColor: Colors.white, fontSize: 16.0 );
+            Fluttertoast.showToast( msg: 'registration failed', toastLength: Toast.LENGTH_SHORT, gravity: ToastGravity.BOTTOM, timeInSecForIosWeb: 1, backgroundColor: Colors.red, textColor: Colors.white, fontSize: 16.0 );
           emit(state.copyWith(
               formStatus: SubmissionFailed(new Exception("Registration Failed"))));
         }

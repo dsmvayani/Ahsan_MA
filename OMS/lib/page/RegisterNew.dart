@@ -248,7 +248,7 @@ class _RegisterNewState extends State<RegisterNew> {
                                                           .read<RegisterBloc>()
                                                           .add(
                                                               VerificationCode1Change(
-                                                                  code: value));
+                                                                  code: '$value'));
                                                       if (value.length == 1) {
                                                         FocusScope.of(context)
                                                             .nextFocus();
@@ -300,7 +300,7 @@ class _RegisterNewState extends State<RegisterNew> {
                                                           .read<RegisterBloc>()
                                                           .add(
                                                               VerificationCode2Change(
-                                                                  code: value));
+                                                                  code: '$value'));
                                                       if (value.length == 1) {
                                                         FocusScope.of(context)
                                                             .nextFocus();
@@ -352,7 +352,7 @@ class _RegisterNewState extends State<RegisterNew> {
                                                           .read<RegisterBloc>()
                                                           .add(
                                                               VerificationCode3Change(
-                                                                  code: value));
+                                                                  code: '$value'));
                                                       if (value.length == 1) {
                                                         FocusScope.of(context)
                                                             .nextFocus();
@@ -404,7 +404,7 @@ class _RegisterNewState extends State<RegisterNew> {
                                                           .read<RegisterBloc>()
                                                           .add(
                                                               VerificationCode4Change(
-                                                                  code: value));
+                                                                  code: '$value'));
                                                       if (value.length == 1) {
                                                         FocusScope.of(context)
                                                             .nextFocus();
@@ -456,7 +456,7 @@ class _RegisterNewState extends State<RegisterNew> {
                                                           .read<RegisterBloc>()
                                                           .add(
                                                               VerificationCode5Change(
-                                                                  code: value));
+                                                                  code: '$value'));
                                                       if (value.length == 1) {
                                                         FocusScope.of(context)
                                                             .nextFocus();
@@ -508,7 +508,7 @@ class _RegisterNewState extends State<RegisterNew> {
                                                           .read<RegisterBloc>()
                                                           .add(
                                                               VerificationCode6Change(
-                                                                  code: value));
+                                                                  code: '$value'));
                                                       if (value.length == 1) {
                                                         FocusScope.of(context)
                                                             .nextFocus();
@@ -578,12 +578,18 @@ class _RegisterNewState extends State<RegisterNew> {
                         borderRadius: new BorderRadius.circular(10))),
                 onPressed: () async {
                   if (otpCodeVisible && controller1.text.length > 0) {
-                    userEnterOtp = controller1.text +
+                    /*userEnterOtp = controller1.text +
                         controller2.text +
                         controller3.text +
                         controller4.text +
                         controller5.text +
-                        controller6.text;
+                        controller6.text;*/
+                    userEnterOtp = '${state.verifyCode1}' +
+                        '${state.verifyCode2}' +
+                        '${state.verifyCode3}' +
+                        '${state.verifyCode4}' +
+                        '${state.verifyCode5}' +
+                        '${state.verifyCode6}';
                     if('${otpNum1}' == '${userEnterOtp}'){
                       /*setState(() {
                         this.otpCodeVisible = false;
@@ -779,15 +785,15 @@ class _InputWithIconState extends State<InputWithIcon> {
                     if (widget.inputType == 1)
                       context
                           .read<RegisterBloc>()
-                          .add(RegisterShopNameChanged(shopName: value))
+                          .add(RegisterShopNameChanged(shopName: '$value'))
                     else if (widget.inputType == 2)
                       context
                           .read<RegisterBloc>()
-                          .add(RegisterContactNoChanged(contactNo: value))
+                          .add(RegisterContactNoChanged(contactNo: '$value'))
                     else if (widget.inputType == 3)
                       context
                           .read<RegisterBloc>()
-                          .add(RegisterPasswordChanged(password: value))
+                          .add(RegisterPasswordChanged(password: '$value'))
                   },
                   controller: widget.controller,
                 );
