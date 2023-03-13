@@ -109,43 +109,49 @@ class _ProductListState extends State<ProductList> {
                   ),
                   SizedBox(
                     height: 80,
-                    child: SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left:10, right: 40),
-                        child: Wrap(
-                          spacing: 30,
-                        children:  ids.map((e) =>
-                            Transform(
-                              transform: new Matrix4.identity()..scale(2.0),
-                              child: FilterChip(
-                                  materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                                showCheckmark: true,
-                                selectedColor: Colors.transparent,
-                                checkmarkColor: Colors.white,
-                                  avatar: CircleAvatar(
-                                    radius: 25,
-                                      child: Container(child: e.length > 1 ? Image.memory(base64Decode(e), width: 500, height: 500,) : Text(''))
-                                  ),
-                                  label: Text(''),
-                                  backgroundColor: Colors.transparent,
-              labelPadding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                  selected: _filters.contains(e),
-                                  onSelected: (bool selected) {
-                                    setState(() {
-                                      if(selected){
-                                        _filters.add(e);
-                                      }
-                                      else{
-                                        _filters.removeWhere((String name) {
-                                          return name == e;
-                                        });
-                                      }
-                                    });
-                                      callProductsOffline('', state.list!, state.list1!, true);
-                                  }),
-                            )
-                        ).toList().toList()
+                    child: Scrollbar(
+                      thickness: 5,
+                      thumbVisibility: true,
+                      radius: Radius.circular(25),
+                      controller: ScrollController(),
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left:10, right: 40),
+                          child: Wrap(
+                            spacing: 30,
+                          children:  ids.map((e) =>
+                              Transform(
+                                transform: new Matrix4.identity()..scale(2.0),
+                                child: FilterChip(
+                                    materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                                  showCheckmark: true,
+                                  selectedColor: Colors.transparent,
+                                  checkmarkColor: Colors.white,
+                                    avatar: CircleAvatar(
+                                      radius: 25,
+                                        child: Container(child: e.length > 1 ? Image.memory(base64Decode(e), width: 500, height: 500,) : Text(''))
+                                    ),
+                                    label: Text(''),
+                                    backgroundColor: Colors.transparent,
+                                  labelPadding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                    selected: _filters.contains(e),
+                                    onSelected: (bool selected) {
+                                      setState(() {
+                                        if(selected){
+                                          _filters.add(e);
+                                        }
+                                        else{
+                                          _filters.removeWhere((String name) {
+                                            return name == e;
+                                          });
+                                        }
+                                      });
+                                        callProductsOffline('', state.list!, state.list1!, true);
+                                    }),
+                              )
+                          ).toList().toList()
+                          ),
                         ),
                       ),
                     ),

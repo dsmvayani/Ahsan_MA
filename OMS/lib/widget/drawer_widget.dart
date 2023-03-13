@@ -19,6 +19,7 @@ class DrawerWidget extends StatefulWidget {
 }
 
 class _DrawerWidgetState extends State<DrawerWidget> {
+  bool showLoader = true;
   User nUser = User(nUserID: '', nUserCode: '', nUserPassword: '', nUserName: '', nUserType: '', nCustomerCode: '', nLoginStatus: false);
   Timer? timer;
   @override
@@ -28,6 +29,9 @@ class _DrawerWidgetState extends State<DrawerWidget> {
   }
   void getUser() async{
       nUser = (await SharedPreferencesConfig.getUser())!;
+      setState(() {
+        showLoader = false;
+      });
   }
   @override
   void dispose() {
@@ -53,7 +57,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
               ),
               padding: EdgeInsets.only(top: 10),
             ),
-            accountEmail: Text(nUser.nCustomerCode),
+            accountEmail: showLoader ? CircularProgressIndicator( color: Colors.white) : Text(nUser.nCustomerCode),
             currentAccountPicture: CircleAvatar(
               backgroundColor:
               Theme.of(context).platform == TargetPlatform.iOS

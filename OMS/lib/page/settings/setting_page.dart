@@ -7,6 +7,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../data/User.dart';
+import '../../session_view.dart';
 import '../../widget/DrawermenuWidget.dart';
 import 'cubit/settings_bloc.dart';
 import 'cubit/settings_event.dart';
@@ -273,7 +274,12 @@ class _ChangePasswordState extends State<ChangePassword> {
                   onPressed: () async {
                     FocusScope.of(context).unfocus();
                     if (_formKey.currentState!.validate()) {
-                      context.read<SettingBloc>().add(UpdatePassword());
+                      // context.read<SettingBloc>().add(UpdatePassword());
+                      final bloc = BlocProvider.of<SettingBloc>(context);
+                      bool result = await bloc.profileUpdate();
+                      if (result) {
+                        Navigator.of(context).push(MaterialPageRoute(builder: (_) => SessionView()));
+                      }
                     }
                   },
                   child: Text(
@@ -447,8 +453,7 @@ class _ProfileTabState extends State<ProfileTab> {
         return state.formStatus is FormSubmitting
             ? CircularProgressIndicator(
           color: MyConstants.of(context)!.primaryColor,
-        )
-            : Padding(
+        ) : Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8),
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(

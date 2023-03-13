@@ -87,12 +87,12 @@ class _SessionViewState extends State<SessionView> {
       builder: (context) => new AlertDialog(
         title: new Text('Are you sure?'),
         content: new Text('Do you want to exit an App'),
-        actions: <Widget>[
-          new FlatButton(
+        actions: [
+           TextButton(
             onPressed: () => Navigator.of(context).pop(false),
             child: new Text('No'),
           ),
-          new FlatButton(
+           TextButton(
             onPressed: () => Navigator.of(context).pop(true),
             child: new Text('Yes'),
           ),

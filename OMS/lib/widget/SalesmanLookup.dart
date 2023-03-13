@@ -97,12 +97,23 @@ class SalesmanLookupState extends State<SalesmanLookup>
                             child: ButtonTheme(
                                 height: 35.0,
                                 minWidth: 110.0,
-                                child: RaisedButton(
-                                  color: Colors.white,
+                                child: ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                    foregroundColor: MyConstants.of(context)!
+                                        .primaryColor,
+                                    backgroundColor: Colors.white,
+                                    shape: RoundedRectangleBorder(
+                                        side: BorderSide(
+                                            color: MyConstants.of(context)!
+                                                .primaryColor),
+                                        borderRadius:
+                                        BorderRadius.circular(5.0)),
+                                  ),
+                                 /* color: Colors.white,
                                   shape: RoundedRectangleBorder(
                                       side: BorderSide(color: MyConstants.of(context)!.primaryColor),
                                       borderRadius: BorderRadius.circular(5.0)),
-                                  splashColor: Colors.white.withAlpha(40),
+                                  splashColor: Colors.white.withAlpha(40),*/
                                   child: Text(
                                     'OK',
                                     textAlign: TextAlign.center,
@@ -122,12 +133,23 @@ class SalesmanLookupState extends State<SalesmanLookup>
                               child:  ButtonTheme(
                                   height: 35.0,
                                   minWidth: 110.0,
-                                  child: RaisedButton(
-                                    color: Colors.white,
+                                  child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      foregroundColor: MyConstants.of(context)!
+                                          .primaryColor,
+                                      backgroundColor: Colors.white,
+                                      shape: RoundedRectangleBorder(
+                                          side: BorderSide(
+                                              color: MyConstants.of(context)!
+                                                  .primaryColor),
+                                          borderRadius:
+                                          BorderRadius.circular(5.0)),
+                                    ),
+                                    /*color: Colors.white,
                                     shape: RoundedRectangleBorder(
                                         side: BorderSide(color: MyConstants.of(context)!.primaryColor),
                                         borderRadius: BorderRadius.circular(5.0)),
-                                    splashColor: Colors.white.withAlpha(40),
+                                    splashColor: Colors.white.withAlpha(40),*/
                                     child: Text(
                                       'Cancel',
                                       textAlign: TextAlign.center,

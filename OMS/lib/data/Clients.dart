@@ -31,7 +31,7 @@ class ClientList{
     try{
       Dio dio = new Dio();
       Response response = await dio.get("https://gentecbspro.com/"+ClientKey+"/assets/Settings.json");
-      var api = await response.data["Production_API"] ;
+      var api = await response.data["Production_API"];
       if(api.toString().length > 0){
         SharedPreferencesConfig.setAPIUrl(api);
       }

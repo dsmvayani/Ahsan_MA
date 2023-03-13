@@ -60,12 +60,12 @@ class _DashboardListState extends State<DashboardList> {
       builder: (context) => new AlertDialog(
         title: new Text('Are you sure? dashboard'),
         content: new Text('Do you want to exit an App'),
-        actions: <Widget>[
-          new FlatButton(
+        actions: [
+           TextButton(
             onPressed: () => Navigator.of(context).pop(false),
             child: new Text('No'),
           ),
-          new FlatButton(
+           TextButton(
             onPressed: () => Navigator.of(context).pop(true),
             child: new Text('Yes'),
           ),
@@ -93,11 +93,18 @@ class _DashboardListState extends State<DashboardList> {
                 title: Text('Dashboard'),
               actions: [
                 IconButton(
+                    icon: const Icon(Icons.notifications_active_outlined),
+                    tooltip: "Notification",
+                    onPressed: () {
+                      // _pullRefresh();
+                    }),
+                IconButton(
                     icon: const Icon(Icons.sync),
                     tooltip: "Refresh Dashboard",
                     onPressed: () {
                       _pullRefresh();
-                    })
+                    }),
+                    
               ]),
             body: state.formStatus is FormSubmitting
                 ? Center(

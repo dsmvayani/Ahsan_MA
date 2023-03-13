@@ -399,7 +399,7 @@ class _AddSaleOrderState extends State<AddSaleOrder> {
                                   child: Center(
                                       child: Text(
                                           'Total Items: ' +
-                                              state.totalItems.toString(),
+                                              state.totalItems.toStringAsFixed(0),
                                           style: TextStyle(
                                               fontSize: 12,
                                               fontWeight: FontWeight.bold)))),
@@ -407,7 +407,7 @@ class _AddSaleOrderState extends State<AddSaleOrder> {
                                   child: Center(
                                       child: Text(
                                           'Total Quantity: ' +
-                                              state.totalQuantity.toString(),
+                                              state.totalQuantity.toStringAsFixed(0),
                                           style: TextStyle(
                                               fontSize: 12,
                                               fontWeight: FontWeight.bold)))),
@@ -415,7 +415,7 @@ class _AddSaleOrderState extends State<AddSaleOrder> {
                                   child: Center(
                                       child: Text(
                                           'Net Amount: ' +
-                                              state.netAmount.toString(),
+                                              state.netAmount.toStringAsFixed(0),
                                           style: TextStyle(
                                               fontSize: 12,
                                               fontWeight: FontWeight.bold))))
