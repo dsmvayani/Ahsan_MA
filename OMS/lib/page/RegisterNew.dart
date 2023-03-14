@@ -590,7 +590,7 @@ class _RegisterNewState extends State<RegisterNew> {
                         '${state.verifyCode4}' +
                         '${state.verifyCode5}' +
                         '${state.verifyCode6}';
-                    if('${otpNum1}' == '${userEnterOtp}'){
+                    if('$otpNum1' == '$userEnterOtp'){
                       /*setState(() {
                         this.otpCodeVisible = false;
                       });*/

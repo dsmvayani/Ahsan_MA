@@ -92,12 +92,12 @@ class _DashboardListState extends State<DashboardList> {
                 ),
                 title: Text('Dashboard'),
               actions: [
-                IconButton(
+                /*IconButton(
                     icon: const Icon(Icons.notifications_active_outlined),
                     tooltip: "Notification",
                     onPressed: () {
                       // _pullRefresh();
-                    }),
+                    }),*/
                 IconButton(
                     icon: const Icon(Icons.sync),
                     tooltip: "Refresh Dashboard",

@@ -101,9 +101,9 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
       try {
         // if(state.nVerificationId!.isEmpty){emit(state.copyWith(formStatus: SubmissionFailed(new Exception("Not Allowed to register"))));}
         emit(state.copyWith(formStatus: FormSubmitting()));
-          final isRegister = await authRepo.registerUser(
+          final isRegister =  authRepo.registerUser(
               '${state.shopName}', '${state.contactNo}', '${state.password}');
-          if (isRegister) {
+          if (await isRegister) {
             final isLogin =
             await authRepo.login(state.contactNo, state.password);
             print('-->5');

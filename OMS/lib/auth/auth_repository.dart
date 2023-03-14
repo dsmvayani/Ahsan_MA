@@ -52,6 +52,7 @@ class AuthRepository{
   Future<bool> registerUser(String shopName,String contact, String password) async {
     try{
       var api = await SharedPreferencesConfig.getAPIUrl();
+      print('-> api $api');
       // var data = "username="+userId+"&password="+password+"&grant_type=password&ip=''&isQueryParameterExist=false";
 
       var data = {
@@ -62,13 +63,16 @@ class AuthRepository{
       Dio dio = new Dio();
       dio.options.headers['Content-Type'] = 'application/json';
       dio.options.headers['No-Auth'] = 'True';
-      Response response = await dio.post(api+"/BSProOMS/RegisterUser", data: data);
+      Response response = await dio.post("${api}BSProOMS/RegisterUser", data: data);
       if(response.statusCode == 200){
+        print('register success');
         return true;
       }
+      print('register failed');
       return false;
     }
     catch (error){
+      print('--- error register --- $error');
       return false;
     }
   }

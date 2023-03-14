@@ -52,7 +52,7 @@ class SharedPreferencesConfig {
   static Future<User?> getUser() async {
     SharedPreferences p = await SharedPreferences.getInstance();
     String? userPref = p.getString('user');
-    if(userPref!.isNotEmpty){
+    if(userPref != null){
     Map<String,dynamic> userMap = jsonDecode(userPref) as Map<String, dynamic>;
     User user = User.fromJson(userMap);
     return user;
