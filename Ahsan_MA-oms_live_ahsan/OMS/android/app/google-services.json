@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "109113662836",
+    "project_id": "bsprooms",
+    "storage_bucket": "bsprooms.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:109113662836:android:233023a4b7efcc6e2de021",
+        "android_client_info": {
+          "package_name": "com.gentec.bsprotnm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "109113662836-f6p9b2lcdnlc17vs7vepfob0q6vnt56m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_pOWES7ayg6Ycz5_SwQb_r5vrwYvI8wQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "109113662836-f6p9b2lcdnlc17vs7vepfob0q6vnt56m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
