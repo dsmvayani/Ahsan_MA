@@ -1,4 +1,4 @@
-package com.gentec.BSProOMS
+package com.gentec.bsprotnm
 
 import io.flutter.embedding.android.FlutterActivity
 
