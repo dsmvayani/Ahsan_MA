@@ -218,6 +218,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   void initState() {
     super.initState();
+    userIdController.text = "+92";
     // checkInitialScreen();
     setCompany();
   }
@@ -332,7 +333,7 @@ class _LoginPageState extends State<LoginPage> {
                               style: TextStyle(
                                   color: MyConstants.of(context)!.primaryColor,
                                   fontStyle: FontStyle.italic,
-                                  decoration: TextDecoration.underline),
+                                  decoration: TextDecoration.underline,fontSize: 18),
                             )),
                         SizedBox(
                           height: 50,
@@ -341,7 +342,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     _loginButton(),
                     Divider(),
-                    Center(child: Text(MyConstants.of(context)!.versionNumber.toString(),style: TextStyle(color: Colors.black38))),
+                    Center(child: Text('Version: ${MyConstants.of(context)!.versionNumber}',style: TextStyle(color: Colors.black38))),
                     SizedBox(
                           height: 30,
                         ),

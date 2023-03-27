@@ -61,6 +61,7 @@ class _RegisterNewState extends State<RegisterNew> {
    // getDefaultMobileCode();
    // textEditingController1 = TextEditingController();
    // initSmsListener();
+    registerMobileController.text = "+92";
     super.initState();
   }
 
@@ -182,11 +183,10 @@ class _RegisterNewState extends State<RegisterNew> {
                                       child: Text(
                                         "Back to Login",
                                         style: TextStyle(
-                                            color: MyConstants.of(context)!
-                                                .primaryColor,
+                                            color: MyConstants.of(context)!.primaryColor,
                                             fontStyle: FontStyle.italic,
                                             decoration:
-                                                TextDecoration.underline),
+                                                TextDecoration.underline,fontSize: 18),
                                       )),
                                   SizedBox(
                                     height: 50,

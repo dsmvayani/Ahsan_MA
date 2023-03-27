@@ -7,6 +7,8 @@ import 'package:BSProOMS/session_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'data/Constants.dart';
+
 class AppNavigator extends StatelessWidget {
   final GlobalKey<NavigatorState> navigatorKey = GlobalKey();
   @override
@@ -26,13 +28,45 @@ class AppNavigator extends StatelessWidget {
                 title: new Text('Are you sure?'),
                 content: new Text('Do you want to exit an App'),
                 actions: [
-                   TextButton(
+                  OutlinedButton(
                     onPressed: () => Navigator.of(context).pop(false),
-                    child: new Text('No'),
+                    style: ButtonStyle(
+                      shape: MaterialStateProperty.all(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                      ),
+                      side: MaterialStateProperty.all(
+                        const BorderSide(
+                          color: Colors.transparent,
+                          width: 1,
+                        ),
+                      ),
+                      backgroundColor: MaterialStateProperty.all(
+                        MyConstants.of(context)!.primaryColor,
+                      ),
+                    ),
+                    child: new Text('No',style: TextStyle(color: Colors.white),),
                   ),
-                   TextButton(
+                  OutlinedButton(
                     onPressed: () => Navigator.of(context).pop(true),
-                    child: new Text('Yes'),
+                    child: new Text('Yes',style: TextStyle(color: Colors.white),),
+                    style: ButtonStyle(
+                      shape: MaterialStateProperty.all(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                      ),
+                      side: MaterialStateProperty.all(
+                        const BorderSide(
+                          color: Colors.transparent,
+                          width: 1,
+                        ),
+                      ),
+                      backgroundColor: MaterialStateProperty.all(
+                        MyConstants.of(context)!.primaryColor,
+                      ),
+                    ),
                   ),
                 ],
               ),

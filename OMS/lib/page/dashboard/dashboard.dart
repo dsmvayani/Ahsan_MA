@@ -29,6 +29,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 
 class DashboardList extends StatefulWidget {
   final VoidCallback openDrawer;
+
   DashboardList({Key? key, required this.openDrawer}) : super(key: key);
 
   @override
@@ -38,6 +39,7 @@ class DashboardList extends StatefulWidget {
 class _DashboardListState extends State<DashboardList> {
   bool isShowClose = false;
   int _selectedIndex = 0;
+
   @override
   void initState() {
     super.initState();
@@ -52,34 +54,35 @@ class _DashboardListState extends State<DashboardList> {
     // context.read<DashboardBloc>().add(GetDashboardList());
     // await Future.delayed(Duration(milliseconds: 1000));
   }
-  Future<bool> _onWillPop() async {
 
+  Future<bool> _onWillPop() async {
     // This dialog will exit your app on saying yes
     return (await showDialog(
-      context: context,
-      builder: (context) => new AlertDialog(
-        title: new Text('Are you sure? dashboard'),
-        content: new Text('Do you want to exit an App'),
-        actions: [
-           TextButton(
-            onPressed: () => Navigator.of(context).pop(false),
-            child: new Text('No'),
+          context: context,
+          builder: (context) => new AlertDialog(
+            title: new Text('Are you sure? dashboard'),
+            content: new Text('Do you want to exit an App'),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.of(context).pop(false),
+                child: new Text('No'),
+              ),
+              TextButton(
+                onPressed: () => Navigator.of(context).pop(true),
+                child: new Text('Yes'),
+              ),
+            ],
           ),
-           TextButton(
-            onPressed: () => Navigator.of(context).pop(true),
-            child: new Text('Yes'),
-          ),
-        ],
-      ),
-    )) ??
+        )) ??
         false;
   }
+
   @override
   Widget build(BuildContext context) {
     return new WillPopScope(
       onWillPop: _onWillPop,
-      child: BlocBuilder<DashboardBloc, DashboardState>(
-          builder: (context, state) {
+      child:
+          BlocBuilder<DashboardBloc, DashboardState>(builder: (context, state) {
         return Sizer(builder: (context, orientation, deviceType) {
           return Scaffold(
             backgroundColor: Colors.white,
@@ -91,28 +94,27 @@ class _DashboardListState extends State<DashboardList> {
                   onClicked: widget.openDrawer,
                 ),
                 title: Text('Dashboard'),
-              actions: [
-                /*IconButton(
+                actions: [
+                  /*IconButton(
                     icon: const Icon(Icons.notifications_active_outlined),
                     tooltip: "Notification",
                     onPressed: () {
                       // _pullRefresh();
                     }),*/
-                IconButton(
-                    icon: const Icon(Icons.sync),
-                    tooltip: "Refresh Dashboard",
-                    onPressed: () {
-                      _pullRefresh();
-                    }),
-                    
-              ]),
+                  IconButton(
+                      icon: const Icon(Icons.sync),
+                      tooltip: "Refresh Dashboard",
+                      onPressed: () {
+                        _pullRefresh();
+                      }),
+                ]),
             body: state.formStatus is FormSubmitting
                 ? Center(
                     child: CircularProgressIndicator(
                     color: MyConstants.of(context)!.primaryColor,
                   ))
                 : RefreshIndicator(
-              color: MyConstants.of(context)!.primaryColor,
+                    color: MyConstants.of(context)!.primaryColor,
                     onRefresh: _pullRefresh,
                     child: SingleChildScrollView(
                       child: SafeArea(
@@ -120,119 +122,162 @@ class _DashboardListState extends State<DashboardList> {
                           builder: (context, state) {
                             return Column(
                               children: [
-                                SizedBox(height: 40,child: Container(),),
-                             state.productOffers.length > 0 ? CarouselSlider(
-                              items: makeSlider(state.productOffers),
-                              options: CarouselOptions(
-                                  enlargeCenterPage: true,
-                                  height: 200,
-                                  aspectRatio: 16/9,
-                                  viewportFraction: 0.8,
-                                  initialPage: 0,
-                                  enableInfiniteScroll: true,
-                                  reverse: false,
-                                  autoPlay: true,
-                                  autoPlayInterval: Duration(seconds: 3),
-                                  autoPlayAnimationDuration: Duration(milliseconds: 800),
-                                  autoPlayCurve: Curves.fastOutSlowIn,
-                                  scrollDirection: Axis.horizontal,
-                              ),
-                              ) : Container(),
-                                state.objBar.isNotEmpty ?
                                 SizedBox(
-                                    height: 30.0.h,
-                                    width: 97.0.w,
-                                    child: Card(
-                                        elevation: 6,
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(20)),
-                                        child: Center(
-                                          child: state.objBar.isEmpty
-                                              ? Text('No Data Found')
-                                              : Padding(
-                                                  padding: const EdgeInsets.only(
-                                                      top: 10),
-                                                  child: BarChart(BarChartData(
-                                                    gridData:
-                                                        FlGridData(show: false),
-                                                    borderData:
-                                                        FlBorderData(show: false),
-                                                    barTouchData: BarTouchData(
-                                                        touchTooltipData: BarTouchTooltipData(
-                                                          fitInsideHorizontally: true,
-                                                            fitInsideVertically: true,
-                                                            // tooltipBgColor: Colors.blueGrey,
+                                  height: 40,
+                                  child: Container(),
+                                ),
+                                state.productOffers.length > 0
+                                    ? CarouselSlider(
+                                        items: makeSlider(state.productOffers),
+                                        options: CarouselOptions(
+                                          enlargeCenterPage: true,
+                                          height: 200,
+                                          aspectRatio: 16 / 9,
+                                          viewportFraction: 0.8,
+                                          initialPage: 0,
+                                          enableInfiniteScroll: true,
+                                          reverse: false,
+                                          autoPlay: true,
+                                          autoPlayInterval:
+                                              Duration(seconds: 3),
+                                          autoPlayAnimationDuration:
+                                              Duration(milliseconds: 800),
+                                          autoPlayCurve: Curves.fastOutSlowIn,
+                                          scrollDirection: Axis.horizontal,
+                                        ),
+                                      )
+                                    : Container(),
+                                state.objBar.isNotEmpty
+                                    ? SizedBox(
+                                        height: 30.0.h,
+                                        width: 97.0.w,
+                                        child: Card(
+                                            elevation: 6,
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(20)),
+                                            child: Center(
+                                              child: state.objBar.isEmpty
+                                                  ? Text('No Data Found')
+                                                  : Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              top: 10),
+                                                      child:
+                                                          BarChart(BarChartData(
+                                                        gridData: FlGridData(
+                                                            show: false),
+                                                        borderData:
+                                                            FlBorderData(
+                                                                show: false),
+                                                        barTouchData:
+                                                            BarTouchData(
+                                                                touchTooltipData:
+                                                                    BarTouchTooltipData(
+                                                                        fitInsideHorizontally:
+                                                                            true,
+                                                                        fitInsideVertically:
+                                                                            true,
+                                                                        // tooltipBgColor: Colors.blueGrey,
 
-                                                            getTooltipItem: (group, groupIndex, rod, rodIndex) {
-                                                              BarData bar = state.objBar[group.x.toInt()];
-                                                              return BarTooltipItem(
-                                                               'Barcode: ' + bar.nBarcode + '\n' 'Item: ' + bar.nItem + '\n',
-                                                                const TextStyle(
-                                                                  color: Colors.white,
-                                                                  fontWeight: FontWeight.bold,
-                                                                  fontSize: 14,
-                                                                ),
-                                                                children: <TextSpan>[
-                                                                  TextSpan(
-                                                                    text: "Quantity: "+(rod.toY).toString(),
-                                                                    style: const TextStyle(
-                                                                      color: Colors.yellow,
-                                                                      fontSize: 12,
-                                                                      fontWeight: FontWeight.w500,
-                                                                    ),
-                                                                  ),
-                                                                ],
-                                                              );
-                                                            })),
+                                                                        getTooltipItem: (group,
+                                                                            groupIndex,
+                                                                            rod,
+                                                                            rodIndex) {
+                                                                          BarData
+                                                                              bar =
+                                                                              state.objBar[group.x.toInt()];
+                                                                          return BarTooltipItem(
+                                                                            'Barcode: ' +
+                                                                                bar.nBarcode +
+                                                                                '\n' 'Item: ' +
+                                                                                bar.nItem +
+                                                                                '\n',
+                                                                            const TextStyle(
+                                                                              color: Colors.white,
+                                                                              fontWeight: FontWeight.bold,
+                                                                              fontSize: 14,
+                                                                            ),
+                                                                            children: <TextSpan>[
+                                                                              TextSpan(
+                                                                                text: "Quantity: " + (rod.toY).toString(),
+                                                                                style: const TextStyle(
+                                                                                  color: Colors.yellow,
+                                                                                  fontSize: 12,
+                                                                                  fontWeight: FontWeight.w500,
+                                                                                ),
+                                                                              ),
+                                                                            ],
+                                                                          );
+                                                                        })),
 
-                                                    // groupsSpace: 10,
+                                                        // groupsSpace: 10,
 
-                                                    titlesData: FlTitlesData(
-                                                      show: true,
-                                                      bottomTitles: AxisTitles(
-                                                        sideTitles: SideTitles(
-                                                          showTitles: true,
-                                                          getTitlesWidget:
-                                                              getTitles,
-                                                          reservedSize: 30,
+                                                        titlesData:
+                                                            FlTitlesData(
+                                                          show: true,
+                                                          bottomTitles:
+                                                              AxisTitles(
+                                                            sideTitles:
+                                                                SideTitles(
+                                                              showTitles: true,
+                                                              getTitlesWidget:
+                                                                  getTitles,
+                                                              reservedSize: 30,
+                                                            ),
+                                                          ),
+                                                          leftTitles:
+                                                              AxisTitles(
+                                                            sideTitles:
+                                                                SideTitles(
+                                                              showTitles: false,
+                                                            ),
+                                                          ),
+                                                          topTitles: AxisTitles(
+                                                            sideTitles:
+                                                                SideTitles(
+                                                              showTitles: false,
+                                                            ),
+                                                          ),
+                                                          rightTitles:
+                                                              AxisTitles(
+                                                            sideTitles:
+                                                                SideTitles(
+                                                              showTitles: false,
+                                                            ),
+                                                          ),
                                                         ),
-                                                      ),
-                                                      leftTitles: AxisTitles(
-                                                        sideTitles: SideTitles(
-                                                          showTitles: false,
-                                                        ),
-                                                      ),
-                                                      topTitles: AxisTitles(
-                                                        sideTitles: SideTitles(
-                                                          showTitles: false,
-                                                        ),
-                                                      ),
-                                                      rightTitles: AxisTitles(
-                                                        sideTitles: SideTitles(
-                                                          showTitles: false,
-                                                        ),
-                                                      ),
+                                                        barGroups: state.objBar
+                                                            .map((e) => makeGroupData(
+                                                                state.objBar
+                                                                    .indexOf(e),
+                                                                e.nQuantity
+                                                                    .toDouble(),
+                                                                barColor: Color((math.Random().nextDouble() *
+                                                                            0xFFFFFF)
+                                                                        .toInt())
+                                                                    .withOpacity(
+                                                                        1.0)))
+                                                            .toList(),
+                                                      )),
                                                     ),
-                                                    barGroups: state.objBar
-                                                        .map((e) => makeGroupData(
-                                                            state.objBar
-                                                                .indexOf(e),
-                                                            e.nQuantity
-                                                                .toDouble(),barColor: Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0)))
-                                                        .toList(),
-                                                  )),
-                                                ),
-                                        ))) : Container(),
-                                state.objBar.isNotEmpty ? SizedBox(height: 15) : Container(),
+                                            )))
+                                    : Container(),
+                                state.objBar.isNotEmpty
+                                    ? SizedBox(height: 15)
+                                    : Container(),
                                 Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceAround,
                                   children: [
                                     GestureDetector(
                                       onTap: () {
-                                        Navigator.of(context)
-                                            .push(MaterialPageRoute(builder: (_) => OrderStatus(formName: "Completed Orders", orderType: "0")));
+                                        Navigator.of(context).push(
+                                            MaterialPageRoute(
+                                                builder: (_) => OrderStatus(
+                                                    formName:
+                                                        "Completed Orders",
+                                                    orderType: "0")));
                                       },
                                       child: SizedBox(
                                           height: 15.0.h,
@@ -241,37 +286,61 @@ class _DashboardListState extends State<DashboardList> {
                                               elevation: 6,
                                               shape: RoundedRectangleBorder(
                                                   borderRadius:
-                                                      BorderRadius.circular(20)),
+                                                      BorderRadius.circular(
+                                                          20)),
                                               child: Center(
                                                   child: Column(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
                                                 children: [
-                                                  Icon(FontAwesomeIcons.shoppingBag,
-                                                      color:
-                                                          MyConstants.of(context)!
-                                                              .primaryColor,
+                                                  Icon(
+                                                      FontAwesomeIcons
+                                                          .shoppingBag,
+                                                      color: MyConstants.of(
+                                                              context)!
+                                                          .primaryColor,
                                                       size: 40),
                                                   SizedBox(height: 5),
-                                                  Text( state.nCompletedOrder.length > 0 ?
-                                                      state.nCompletedOrder.split("|")[1]
-                                                          .toString() : "",
+                                                  Text(
+                                                      state.nCompletedOrder
+                                                                  .length >
+                                                              0
+                                                          ? state
+                                                              .nCompletedOrder
+                                                              .split("|")[1]
+                                                              .toString()
+                                                          : "",
                                                       style: TextStyle(
                                                           fontWeight:
                                                               FontWeight.bold)),
                                                   SizedBox(height: 3),
-                                                  Text( state.nCompletedOrder.length > 0 ?
-                                                    state.nCompletedOrder.split("|")[0].replaceAllMapped(RegExp(r'(?<=[a-z])[A-Z]'), (Match m) => (' ' + m.group(0)!))
-                                                    : "",
-                                                    style: TextStyle(fontSize: 10),
+                                                  Text(
+                                                    state.nCompletedOrder
+                                                                .length >
+                                                            0
+                                                        ? state.nCompletedOrder
+                                                            .split("|")[0]
+                                                            .replaceAllMapped(
+                                                                RegExp(
+                                                                    r'(?<=[a-z])[A-Z]'),
+                                                                (Match m) =>
+                                                                    (' ' +
+                                                                        m.group(
+                                                                            0)!))
+                                                        : "",
+                                                    style:
+                                                        TextStyle(fontSize: 10),
                                                   ),
                                                 ],
                                               )))),
                                     ),
                                     GestureDetector(
                                       onTap: () {
-                                        Navigator.of(context)
-                                            .push(MaterialPageRoute(builder: (_) => OrderStatus(formName: "Pending Orders", orderType: "1")));
+                                        Navigator.of(context).push(
+                                            MaterialPageRoute(
+                                                builder: (_) => OrderStatus(
+                                                    formName: "Pending Orders",
+                                                    orderType: "1")));
                                       },
                                       child: SizedBox(
                                           height: 15.0.h,
@@ -280,7 +349,8 @@ class _DashboardListState extends State<DashboardList> {
                                               elevation: 6,
                                               shape: RoundedRectangleBorder(
                                                   borderRadius:
-                                                      BorderRadius.circular(20)),
+                                                      BorderRadius.circular(
+                                                          20)),
                                               child: Center(
                                                   child: Column(
                                                 mainAxisAlignment:
@@ -289,30 +359,49 @@ class _DashboardListState extends State<DashboardList> {
                                                   Icon(
                                                       FontAwesomeIcons
                                                           .shoppingBasket,
-                                                      color:
-                                                          MyConstants.of(context)!
-                                                              .primaryColor,
+                                                      color: MyConstants.of(
+                                                              context)!
+                                                          .primaryColor,
                                                       size: 40),
                                                   SizedBox(height: 5),
-                                                  Text( state.nPendingOrder.length > 0 ?
-                                                      state.nPendingOrder.split("|")[1]
-                                                          .toString() : "",
+                                                  Text(
+                                                      state.nPendingOrder
+                                                                  .length >
+                                                              0
+                                                          ? state.nPendingOrder
+                                                              .split("|")[1]
+                                                              .toString()
+                                                          : "",
                                                       style: TextStyle(
                                                           fontWeight:
                                                               FontWeight.bold)),
                                                   SizedBox(height: 3),
-                                                  Text(state.nPendingOrder.length > 0 ?
-                                                    state.nPendingOrder.split("|")[0].replaceAllMapped(RegExp(r'(?<=[a-z])[A-Z]'), (Match m) => (' ' + m.group(0)!))
-                                                    : "",
-                                                    style: TextStyle(fontSize: 10),
+                                                  Text(
+                                                    state.nPendingOrder.length >
+                                                            0
+                                                        ? state.nPendingOrder
+                                                            .split("|")[0]
+                                                            .replaceAllMapped(
+                                                                RegExp(
+                                                                    r'(?<=[a-z])[A-Z]'),
+                                                                (Match m) =>
+                                                                    (' ' +
+                                                                        m.group(
+                                                                            0)!))
+                                                        : "",
+                                                    style:
+                                                        TextStyle(fontSize: 10),
                                                   ),
                                                 ],
                                               )))),
                                     ),
                                     GestureDetector(
                                       onTap: () {
-                                        Navigator.of(context).push(MaterialPageRoute(
-                                            builder: (_) => LedgerPage(openDrawer: () => widget.openDrawer)));
+                                        Navigator.of(context).push(
+                                            MaterialPageRoute(
+                                                builder: (_) => LedgerPage(
+                                                    openDrawer: () =>
+                                                        widget.openDrawer)));
                                       },
                                       child: SizedBox(
                                           height: 15.0.h,
@@ -321,30 +410,49 @@ class _DashboardListState extends State<DashboardList> {
                                               elevation: 6,
                                               shape: RoundedRectangleBorder(
                                                   borderRadius:
-                                                      BorderRadius.circular(20)),
+                                                      BorderRadius.circular(
+                                                          20)),
                                               child: Center(
                                                   child: Column(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
                                                 children: [
-                                                  Icon(FontAwesomeIcons.landmark,
-                                                      color:
-                                                          MyConstants.of(context)!
-                                                              .primaryColor,
+                                                  Icon(
+                                                      FontAwesomeIcons.landmark,
+                                                      color: MyConstants.of(
+                                                              context)!
+                                                          .primaryColor,
                                                       size: 40),
                                                   SizedBox(height: 5),
-                                                  Text( state.nAccountBalance.length > 0 ?
-                                                      state.nAccountBalance.split("|")[1]
-                                                          .toString() : ""
-                                                      ,
+                                                  Text(
+                                                      state.nAccountBalance
+                                                                  .length >
+                                                              0
+                                                          ? state
+                                                              .nAccountBalance
+                                                              .split("|")[1]
+                                                              .toString()
+                                                          : "",
                                                       style: TextStyle(
                                                           fontWeight:
                                                               FontWeight.bold)),
                                                   SizedBox(height: 3),
-                                                  Text( state.nAccountBalance.length > 0 ?
-                                                    state.nAccountBalance.split("|")[0].replaceAllMapped(RegExp(r'(?<=[a-z])[A-Z]'), (Match m) => (' ' + m.group(0)!))
-                                                    : "",
-                                                    style: TextStyle(fontSize: 10),
+                                                  Text(
+                                                    state.nAccountBalance
+                                                                .length >
+                                                            0
+                                                        ? state.nAccountBalance
+                                                            .split("|")[0]
+                                                            .replaceAllMapped(
+                                                                RegExp(
+                                                                    r'(?<=[a-z])[A-Z]'),
+                                                                (Match m) =>
+                                                                    (' ' +
+                                                                        m.group(
+                                                                            0)!))
+                                                        : "",
+                                                    style:
+                                                        TextStyle(fontSize: 10),
                                                   ),
                                                 ],
                                               )))),
@@ -419,17 +527,23 @@ class _DashboardListState extends State<DashboardList> {
                                 //   ],
                                 // ),
                                 Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     GestureDetector(
                                       onTap: () {
-                                        Navigator.of(context)
-                                            .push(MaterialPageRoute(builder: (_) =>
-                                         state.objUser!.nCustomerCode.length < 1 ?
-                                         UnAuthorizedScreen(openDrawer: widget.openDrawer) :
-                                         AddSaleOrder(isEdit: false,)
-                                        ));
+                                        Navigator.of(context).push(
+                                            MaterialPageRoute(
+                                                builder: (_) => state
+                                                            .objUser!
+                                                            .nCustomerCode
+                                                            .length <
+                                                        1
+                                                    ? UnAuthorizedScreen(
+                                                        openDrawer:
+                                                            widget.openDrawer)
+                                                    : AddSaleOrder(
+                                                        isEdit: false,
+                                                      )));
                                       },
                                       child: SizedBox(
                                           height: 10.0.h,
@@ -438,24 +552,27 @@ class _DashboardListState extends State<DashboardList> {
                                               elevation: 6,
                                               shape: RoundedRectangleBorder(
                                                   borderRadius:
-                                                  BorderRadius.circular(10)),
+                                                      BorderRadius.circular(
+                                                          10)),
                                               child: Center(
                                                   child: Column(
-                                                    mainAxisAlignment:
+                                                mainAxisAlignment:
                                                     MainAxisAlignment.center,
-                                                    children: [
-                                                      Icon(FontAwesomeIcons.cartPlus,
-                                                          color:
-                                                          MyConstants.of(context)!
-                                                              .primaryColor,
-                                                          size: 30),
-                                                      SizedBox(height: 5),
-                                                      Text(
-                                                        'New Order',
-                                                        style: TextStyle(fontSize: 10),
-                                                      ),
-                                                    ],
-                                                  )))),
+                                                children: [
+                                                  Icon(
+                                                      FontAwesomeIcons.cartPlus,
+                                                      color: MyConstants.of(
+                                                              context)!
+                                                          .primaryColor,
+                                                      size: 30),
+                                                  SizedBox(height: 5),
+                                                  Text(
+                                                    'New Order',
+                                                    style:
+                                                        TextStyle(fontSize: 10),
+                                                  ),
+                                                ],
+                                              )))),
                                     ),
                                     SizedBox(width: 10),
                                     SizedBox(
@@ -471,7 +588,8 @@ class _DashboardListState extends State<DashboardList> {
                                                 // alignment: Alignment.center,
                                                 children: <Widget>[
                                                   Icon(
-                                                    Icons.calendar_today_rounded,
+                                                    Icons
+                                                        .calendar_today_rounded,
                                                     color:
                                                         MyConstants.of(context)!
                                                             .primaryColor,
@@ -487,7 +605,8 @@ class _DashboardListState extends State<DashboardList> {
                                                           ? state
                                                               .nOrderDeliveryWeekDay
                                                               .substring(0, 3)
-                                                              .toUpperCase().trim()
+                                                              .toUpperCase()
+                                                              .trim()
                                                           : state
                                                               .nOrderDeliveryWeekDay,
                                                       style: TextStyle(
@@ -547,14 +666,15 @@ class _DashboardListState extends State<DashboardList> {
                   ),
             bottomNavigationBar: BottomNavigationBar(
               currentIndex: _selectedIndex,
-              onTap: (int index){
-                if(index == 0){
+              onTap: (int index) {
+                if (index == 0) {
                   _makePhoneCall(state.nContactNo);
-                }
-                else if(index == 1){
+                } else if (index == 1) {
                   _launchWhatsapp();
                 }
-                setState(() { _selectedIndex = index; });
+                setState(() {
+                  _selectedIndex = index;
+                });
               },
               elevation: 0,
               showSelectedLabels: false,
@@ -563,18 +683,24 @@ class _DashboardListState extends State<DashboardList> {
               backgroundColor: MyConstants.of(context)!.primaryColor,
               selectedFontSize: 20,
               unselectedItemColor: Colors.black54,
-              selectedIconTheme: IconThemeData(color: MyConstants.of(context)!.primaryColor),
+              selectedIconTheme:
+                  IconThemeData(color: MyConstants.of(context)!.primaryColor),
               selectedItemColor: MyConstants.of(context)!.primaryColor,
               selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
               items: const <BottomNavigationBarItem>[
                 BottomNavigationBarItem(
-                  icon: Icon(FontAwesomeIcons.phoneAlt, size: 30,),
-                  label: ""
-                ),
+                    icon: Icon(
+                      FontAwesomeIcons.phoneAlt,
+                      size: 30,
+                    ),
+                    label: ""),
                 BottomNavigationBarItem(
-                  icon: Icon(FontAwesomeIcons.whatsapp,color: Colors.green,size: 30,),
-                    label: ""
-                ),
+                    icon: Icon(
+                      FontAwesomeIcons.whatsapp,
+                      color: Colors.green,
+                      size: 30,
+                    ),
+                    label: ""),
               ],
             ),
           );
@@ -582,6 +708,7 @@ class _DashboardListState extends State<DashboardList> {
       }),
     );
   }
+
   BarChartGroupData makeGroupData(
     int x,
     double y, {
@@ -601,67 +728,87 @@ class _DashboardListState extends State<DashboardList> {
       // showingTooltipIndicators: showTooltips,
     );
   }
-   List<Widget> makeSlider(List<ProductOffers> offers) {
-    return offers.map((e) => Container(
-      child: Container(
-        width: double.infinity,
-        margin: EdgeInsets.all(5.0),
-        child: ClipRRect(
-            borderRadius: BorderRadius.all(Radius.circular(5.0)),
-            child: Stack(
-              children: <Widget>[
 
-                // Image.network(e.nAttribute1Image, fit: BoxFit.fitHeight,width: 100.0.w),
-            Image.memory(base64Decode(e.nAttribute1Image),
-              errorBuilder:(BuildContext context, Object exception, StackTrace? stackTrace) {
-                return const Text('No Image found');
-              },
-              fit: BoxFit.fitHeight,width: 100.0.w,),
-                Positioned(
-                  bottom: 0.0,
-                  left: 0.0,
-                  right: 0.0,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [
-                          Color.fromARGB(200, 0, 0, 0),
-                          Color.fromARGB(0, 0, 0, 0)
-                        ],
-                        begin: Alignment.bottomCenter,
-                        end: Alignment.topCenter,
+  List<Widget> makeSlider(List<ProductOffers> offers) {
+    return offers.map((e) {
+
+      return Container(
+        child: Container(
+          width: double.infinity,
+          margin: EdgeInsets.all(5.0),
+          child: ClipRRect(
+              borderRadius: BorderRadius.all(Radius.circular(5.0)),
+              child: Stack(
+                children: [
+                  Image.network(
+                          '${e.nAttribute1Image}',
+                          fit: BoxFit.fitHeight,
+                          width: 100.0.w,
+                        ),
+                  /*Image.memory(
+                    base64Decode(e.nAttribute1Image),
+                    errorBuilder: (BuildContext context, Object exception,
+                        StackTrace? stackTrace) {
+                      debugPrint('--------> Your error message $exception');
+                      return const Text('No Image found');
+                    },
+                    fit: BoxFit.fitHeight,
+                    width: 100.0.w,
+                  ),*/
+                  Positioned(
+                    bottom: 0.0,
+                    left: 0.0,
+                    right: 0.0,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [
+                            Color.fromARGB(200, 0, 0, 0),
+                            Color.fromARGB(0, 0, 0, 0)
+                          ],
+                          begin: Alignment.bottomCenter,
+                          end: Alignment.topCenter,
+                        ),
                       ),
+                      padding: EdgeInsets.symmetric(
+                          vertical: 10.0, horizontal: 10.0),
+                      child: RichText(
+                          text: TextSpan(
+                              children: [
+                            TextSpan(
+                                text: '\n' +
+                                    DateFormat.yMMMEd().format(e.nStartDate) +
+                                    " - " +
+                                    DateFormat.yMMMEd().format(e.nEndDate) +
+                                    '\n',
+                                style: TextStyle(fontSize: 12)),
+                            TextSpan(
+                                text: "Barcode: " + e.nBarCode + '\n',
+                                style: TextStyle(fontSize: 14)),
+                            TextSpan(
+                                text: e.nOfferDescription,
+                                style: TextStyle(fontSize: 14)),
+                          ],
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold))),
+                      // child: Text(
+                      //   'DESC ${e.nOfferDescription}',
+                      //   style: TextStyle(
+                      //     color: Colors.white,
+                      //     fontSize: 14.0,
+                      //     fontWeight: FontWeight.bold,
+                      //   ),
+                      // ),
                     ),
-                    padding: EdgeInsets.symmetric(
-                        vertical: 10.0, horizontal: 10.0),
-                    child: RichText(
-                        text: TextSpan(children: [
-                          TextSpan(
-                              text: '\n' + DateFormat.yMMMEd().format(e.nStartDate) + " - " + DateFormat.yMMMEd().format(e.nEndDate) + '\n',
-                              style: TextStyle( fontSize: 12)),
-                          TextSpan(
-                              text: "Barcode: " +e.nBarCode+ '\n',
-                              style:
-                              TextStyle(fontSize: 14)),
-                          TextSpan(
-                              text: e.nOfferDescription,
-                              style: TextStyle(fontSize: 14)),
-                        ], style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold))),
-                    // child: Text(
-                    //   'DESC ${e.nOfferDescription}',
-                    //   style: TextStyle(
-                    //     color: Colors.white,
-                    //     fontSize: 14.0,
-                    //     fontWeight: FontWeight.bold,
-                    //   ),
-                    // ),
                   ),
-                ),
-              ],
-            )),
-      ),
-    )).toList();
+                ],
+              )),
+        ),
+      );
+    }).toList();
   }
+
   String url(phone, message) {
     if (Platform.isAndroid) {
       // add the [https]
@@ -671,9 +818,11 @@ class _DashboardListState extends State<DashboardList> {
       return "https://api.whatsapp.com/send?phone=$phone=${Uri.parse(message)}"; // new line
     }
   }
+
   _launchWhatsapp() async {
     var whatsapp = context.read<DashboardBloc>().state.nWhatsappNo;
-    var whatsappAndroid = Uri.parse("whatsapp://send?phone=$whatsapp&text=How may I help you?");
+    var whatsappAndroid =
+        Uri.parse("whatsapp://send?phone=$whatsapp&text=How may I help you?");
     // var whatsappAndroid = Uri.parse(url(whatsapp, "Hi"));
 
     if (await canLaunchUrl(whatsappAndroid)) {
@@ -686,6 +835,7 @@ class _DashboardListState extends State<DashboardList> {
       );
     }
   }
+
   Future<void> _makePhoneCall(String phoneNumber) async {
     final Uri launchUri = Uri(
       scheme: 'tel',
@@ -703,14 +853,17 @@ class _DashboardListState extends State<DashboardList> {
         ),
         subtitle: MyShimmerEffectUI.rectangular(height: 14),
       );
+
   Widget getTitles(double value, TitleMeta meta) {
-    const style = TextStyle( color: Colors.black, fontWeight: FontWeight.bold, fontSize: 14);
+    const style = TextStyle(
+        color: Colors.black, fontWeight: FontWeight.bold, fontSize: 14);
     return BlocBuilder<DashboardBloc, DashboardState>(
       builder: (context, state) {
         return SideTitleWidget(
           axisSide: meta.axisSide,
           space: 5,
-          child: Text(state.objBar[value.toInt()].nQuantity.toString(), style: style),
+          child: Text(state.objBar[value.toInt()].nQuantity.toString(),
+              style: style),
         );
       },
     );
